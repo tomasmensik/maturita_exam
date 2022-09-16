@@ -12,6 +12,6 @@
 
 # Časový harmonogram VELICE obecně
 
-> ***Červen-červenec***
+> ***Září***
 
-- zařídit dokumentaci, podívat se na jazyky, pochopit kód.
+- zařídit dokumentaci, podívat se na jazyky, pochopit kód, spustit celkový Kelvin.
