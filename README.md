@@ -1,5 +1,7 @@
 # Time Scheduler
+
 *Název je v procesu :)*
+
 *** Maturitní práce Jan Slivka 2022 SSPU-Opava***
 
 ## Proč tento projekt?
@@ -23,6 +25,7 @@
 >>**3.** Lze také sdílet mezi ostatními za pomocí chatu
 
 ##Spolupracuji
+
 >**Tomáš Menšík** github:(https://github.com/tomasmensik/zaverecna_prace)
 
 
