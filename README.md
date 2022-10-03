@@ -2,7 +2,7 @@
 
 *Název je v procesu :)*
 
-*** Maturitní práce Jan Slivka 2022 SSPU-Opava***
+***Maturitní práce Jan Slivka 2022 SSPU-Opava***
 
 ## Proč tento projekt?
 >Má kontraproduktivita spočívá v tom, že mám špatně organizovaný čas
