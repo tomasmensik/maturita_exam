@@ -1,17 +1,35 @@
-# Kelvin - The Ultimate Code Examinator
-*** Maturitní práce Jan Slivka ve spolupráci s VŠB-TUO studenty v Ostravě.***
-**Github: [kelvin](https://github.com/mrlvsb/kelvin/**
-## V čem spolupráce spočívá?
->Tím, že projekt není ve finálním stavu, pouze v "kostře", tak mým úkolem bude projekt alespoň na 75%.
+# Time Scheduler
+*Název je v procesu :)*
+*** Maturitní práce Jan Slivka 2022 SSPU-Opava***
+
+## Proč tento projekt?
+>Má kontraproduktivita spočívá v tom, že mám špatně organizovaný čas
 >>**Obecně**
->>**1.** Vytvořit dokumentaci k projetu, orientaci, následně se přihodí na hlavní [github](https://github.com/mrlvsb/kelvin/) projektu.
->>**2.** Tím, že projekt není ve finálním stavu, pouze v "kostře", tak mým úkolem bude vyřešit chyby.
->>**3.** Následně je třeba přidělat co nejvíce komponent k projektu(komentáře, administrativní správa kódů, zadání, jak z pohledu učitele, tak i žáka.
+>>**1.** Skáču od práce k práci a v celku neudělám to, co jsem plánoval
+>>**2.** Potřebuji lépe organizovat svůj čas 
+>>**3.** Věřím, že tento problém má spousta lidí v mém okolí a tak bych si přál, aby byl můj projekt užitečný. A to hlavně na této škole, kde je to potřeba.
+
+## Pro koho je projekt určen?
+>Pro každého, kdo si myslí, že ze svého dne může "vymáčknout" více, než momentálně dělá
+>>**Obecně**
+>>**1.** Chce si organizovat projekt, ale nemá na to prostředky
+>>**2.** Plánování svého volného času 
+>>**3.** Lze také sdílet mezi ostatními za pomocí chatu
+
+##Spolupracuji
+>**Tomáš Menšík** github:(https://github.com/tomasmensik/zaverecna_prace)
 
 
+# Časový harmonogram
 
-# Časový harmonogram VELICE obecně
+###říjen:
+- [ ] Vymyslet název projektu
+- [ ] Zvolit technologie, ve kterých bude projekt tvořen
+- [ ] Vytvořit datový model
+- [ ] Udělat základní vizualizaci projektu
 
-> ***Září***
 
-- zařídit dokumentaci, podívat se na jazyky, pochopit kód, spustit celkový Kelvin.
+#celkově strávený čas na projektu:
+| Den  | Počet hodin |
+| --------- | -----:|
+| 3.10 2022  |  1 hodina |
