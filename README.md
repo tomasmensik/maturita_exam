@@ -5,6 +5,7 @@
 ## Proč tento projekt?
 >Má kontraproduktivita spočívá v tom, že mám špatně organizovaný čas
 >>**Obecně**
+>>
 >>**1.** Skáču od práce k práci a v celku neudělám to, co jsem plánoval
 >>
 >>**2.** Potřebuji lépe organizovat svůj čas
@@ -14,6 +15,7 @@
 ## Pro koho je projekt určen?
 >Pro každého, kdo si myslí, že ze svého dne může "vymáčknout" více, než momentálně dělá
 >>**Obecně**
+>>
 >>**1.** Chce si organizovat projekt, ale nemá na to prostředky
 >>
 >>**2.** Plánování svého volného času
