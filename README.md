@@ -22,7 +22,7 @@
 
 # Časový harmonogram
 
-###říjen:
+### říjen:
 - [ ] Vymyslet název projektu
 - [ ] Zvolit technologie, ve kterých bude projekt tvořen
 - [ ] Vytvořit datový model
