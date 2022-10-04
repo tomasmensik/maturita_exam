@@ -58,7 +58,7 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 
 
 #### Celkově strávený čas na projektu: Jan Slivka
-|    Den   | čas | Info |
+|    Den   | Čas | Info |
 | -------- | -------- | --------|
 | 30.9.2022| 1 hodin | Seznámování s projektem a problémy v něm |
 | 3.10 2022| 2 hodina | Vymýšlení projektu a hledání informací |
@@ -89,7 +89,7 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 > ...
 
 #### Celkově strávený čas na projektu: Tomáš Menšík
-| Den  | Tomáš Menšík  | Info |
+| Den  | Čas  | Info |
 | -------- | -------- | -------- |
 | 30.9.2022 | 4 hodiny | Seznámování s projektem a problémy v něm |
 | 4.10.2022 | 1 hodina | Napsání Github repozitáře, rozvržení projektu |
