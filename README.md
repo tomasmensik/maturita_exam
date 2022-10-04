@@ -50,12 +50,11 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 #### Časový harmonogram:
 - Říjen
 
-> -Rozvržení projektu, vytvoření Readme .md
+> Rozvržení projektu, vytvoření Readme.md
 > 
-> -Vytvořit databázi
+> Vytvoření databáze.
 > 
-> -Vypsat základní data
-
+> Vypsání základních dat.
 
 #### Celkově strávený čas na projektu: Jan Slivka
 |    Den   | Čas | Info |
@@ -82,17 +81,17 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 #### Časový harmonogram:
 - Říjen
 
-> ...
+> Rozvržení projektu, vytvoření Readme.md
 > 
-> ...
+> Nakreslení základního layoutu.
 > 
-> ...
+> Vybrat hlavní theme barev, fontů a frameworků.
 
 #### Celkově strávený čas na projektu: Tomáš Menšík
 | Den  | Čas  | Info |
 | -------- | -------- | -------- |
 | 30.9.2022 | 4 hodiny | Seznámování s projektem a problémy v něm |
-| 4.10.2022 | 1 hodina | Napsání Github repozitáře, rozvržení projektu |
+| 4.10.2022 | 1 hodina | Napsání Github repozitáře, rozvržení projektu, hledání technologií |
 
 
 
