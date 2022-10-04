@@ -1,5 +1,5 @@
 # Time Scheduler
-### Zavěrečná práce Honzy Slivky a Tomáše Menšíka
+### Zavěrečná práce Tomáše Menšíka a Jana Slivky
 
 [![N|Solid](https://clickup.com/?utm_source=google&utm_medium=cpc&utm_campaign=gs_cpc_t4_nnc_brand_trial_all-devices_cpc_lp_x_all-departments_alpha_kd-brand-t4-20220710&utm_content=all-countries_kw-target_text_all-industries_all-features_all-use-cases_clickup_exact&utm_term=e_clickup&gclid=EAIaIQobChMIgsuilqfG-gIVSOztCh2gswBKEAAYASAAEgIwsvD_BwE)
 
