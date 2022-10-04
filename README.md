@@ -21,7 +21,9 @@ Naučit se nové technologie (většinou nové frameworky a knihovny), ve který
 - Dále pro učitele, kteří mohou kontrolovat stav maturitních projektů studentů za pochodu.
 
 > **1.** Chce si organizovat projekt, ale nemá na to prostředky.
+> 
 > **2.** Mít všechny informace o svém projektu přehledně na jednom místě.  
+> 
 > **3.** Lze také komunikovat mezi ostatními účastníky projektu za pomocí chatu.
 
 
@@ -52,7 +54,9 @@ Naučit se nové technologie (většinou nové frameworky a knihovny), ve který
 - Říjen
 
 > -Rozvržení projektu, vytvoření Readme .md
+> 
 > -Vytvořit databázi
+> 
 > -Vypsat základní data
 #### Celkově strávený čas na projektu: Jan Slivka
 |    Den   | čas | Info |
@@ -79,7 +83,7 @@ Naučit se nové technologie (většinou nové frameworky a knihovny), ve který
 
 #### Celkově strávený čas na projektu: Tomáš Menšík
 | Den  | Tomáš Menšík  | Info |
-| -------- | -------- | -------- | -------- |
+| -------- | -------- | -------- |
 | 30.9.2022 | 4 hodiny | Seznámování s projektem a problémy v něm |
 | 4.10.2022 | 1 hodina | Napsání Github repozitáře, rozvržení projektu |
 
@@ -87,28 +91,8 @@ Naučit se nové technologie (většinou nové frameworky a knihovny), ve který
 - Říjen
 
 > ...
+> 
 > ...
+> 
 > ...
 
-
-
-
-
-
-
-## Instalace
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus ac leo pretium faucibus.
-Voluptate velit esse cillum dolore eu fugiat nulla pariatur. Integer pellentesque quam vel velit. .
-
-```sh
-cd dillinger
-npm i
-node app
-```
-
-For production environments...
-
-```sh
-npm install --production
-NODE_ENV=production node app
-```
