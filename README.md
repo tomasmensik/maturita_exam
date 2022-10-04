@@ -35,14 +35,14 @@ Naučit se nové technologie (většinou nové frameworky a knihovny), ve který
 > Zaměření na backend (Databáze, funkčnost)
 
 ## Backend
-#### Použité technologie
+#### Použité technologie:
 - [Python] - počítačový programovací jazyk, který se často používá k vytváření webových stránek a softwaru.
 - [Django]-je open source (webový aplikační framework) napsaný v Pythonu, který se volně drží architektury Model-Pohled-Šablona (Model-View-Template)
 - [ GraphQL] -  GraphQL je dotazovací jazyk pro API a běhové prostředí pro plnění těchto dotazů.
 - [Docker] - otevřená platforma pro vývoj, dodávání a provozování aplikací
 
 
-#### Zdroje a tutoriály
+#### Zdroje a tutoriály:
 
 | Zdroj | Odkaz |
 | ------ | ------ |
@@ -50,7 +50,7 @@ Naučit se nové technologie (většinou nové frameworky a knihovny), ve který
 | Youtube - Django Tutorial | [Click here](https://www.youtube.com/watch?v=F5mRW0jo-U4) |
 | Stackoverflow - většina problémů | [Click here](https://stackoverflow.com/) |
 | hygraph - REST API VS GraphQL | [Click here](https://www.section.io/engineering-education/integrating-graphql-api-in-a-django-application/) |
-#### Časový harmonogram
+#### Časový harmonogram:
 - Říjen
 
 > -Rozvržení projektu, vytvoření Readme .md
@@ -66,13 +66,13 @@ Naučit se nové technologie (většinou nové frameworky a knihovny), ve který
 | 4.10.2022| 4 hodina | Napsání Github repozitáře, rozvržení projektu, hledání technologií |
 
 ## Frontend
-#### Použité technologie
+#### Použité technologie:
 
 - [HTML/CSS] - jedna ze základních technologií pro tvorbu webových stránek
 - [Javascript] - dynamický programovací jazyk, který se používá pro vývoj webových stránek, webových aplikací nebo her
 - [Github] - platforma pro správu verzí a spolupráci v týmu
 
-#### Zdroje a tutoriály
+#### Zdroje a tutoriály:
 
 | Zdroj | Odkaz |
 | ------ | ------ |
@@ -80,14 +80,7 @@ Naučit se nové technologie (většinou nové frameworky a knihovny), ve který
 | Youtube - Django Tutorial | [Click here](https://www.youtube.com/watch?v=F5mRW0jo-U4) |
 | Stackoverflow - většina problémů | [Click here](https://stackoverflow.com/) |
 
-
-#### Celkově strávený čas na projektu: Tomáš Menšík
-| Den  | Tomáš Menšík  | Info |
-| -------- | -------- | -------- |
-| 30.9.2022 | 4 hodiny | Seznámování s projektem a problémy v něm |
-| 4.10.2022 | 1 hodina | Napsání Github repozitáře, rozvržení projektu |
-
-#### Časový harmonogram
+#### Časový harmonogram:
 - Říjen
 
 > ...
@@ -95,4 +88,12 @@ Naučit se nové technologie (většinou nové frameworky a knihovny), ve který
 > ...
 > 
 > ...
+
+#### Celkově strávený čas na projektu: Tomáš Menšík
+| Den  | Tomáš Menšík  | Info |
+| -------- | -------- | -------- |
+| 30.9.2022 | 4 hodiny | Seznámování s projektem a problémy v něm |
+| 4.10.2022 | 1 hodina | Napsání Github repozitáře, rozvržení projektu |
+
+
 
