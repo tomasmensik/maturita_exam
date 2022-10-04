@@ -34,7 +34,7 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 - [Python] - počítačový programovací jazyk, který se často používá k vytváření webových stránek a softwaru.
 - [Django]- open source webový aplikační framework napsaný v Pythonu, který se volně drží architektury Model-Pohled-Šablona (Model-View-Template).
 - [ GraphQL] -  GraphQL je dotazovací jazyk pro API a běhové prostředí pro plnění těchto dotazů.
-- [Docker] - otevřená platforma pro vývoj, dodávání a provozování aplikací.
+- [Github] - platforma pro správu verzí a spolupráci v týmu.
 
 
 #### Zdroje a tutoriály:
@@ -82,9 +82,10 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 ## Frontend - Tomáš Menšík
 #### Použité technologie:
 
-- [HTML/CSS] - jedna ze základních technologií pro tvorbu webových stránek
-- [Javascript] - dynamický programovací jazyk, který se používá pro vývoj webových stránek, webových aplikací nebo her
-- [Github] - platforma pro správu verzí a spolupráci v týmu
+- [HTML/CSS] - jedna ze základních technologií pro tvorbu webových stránek.
+- [Javascript] - dynamický programovací jazyk, který se používá pro vývoj webových stránek, webových aplikací nebo her.
+- [React] - javascriptová knihovna pro tvorbu uživatelského rozhraní.
+- [Github] - platforma pro správu verzí a spolupráci v týmu.
 
 #### Zdroje a tutoriály:
 
