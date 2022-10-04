@@ -21,7 +21,9 @@ Naučit se nové technologie (většinou nové frameworky a knihovny), ve který
 - Dále pro učitele, kteří mohou kontrolovat stav maturitních projektů studentů za pochodu.
 
 > **1.** Chce si organizovat projekt, ale nemá na to prostředky.
-> **2.** Mít všechny informace o svém projektu přehledně na jednom místě.  
+> 
+> **2.** Mít všechny informace o svém projektu přehledně na jednom místě.
+>   
 > **3.** Lze také komunikovat mezi ostatními účastníky projektu za pomocí chatu.
 
 
