@@ -56,6 +56,22 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 > 
 > Vypsání základních dat.
 
+- Listopad
+
+> ...
+> 
+> ...
+> 
+> ...
+
+- Prosinec
+
+> ...
+> 
+> ...
+> 
+> ...
+
 #### Celkově strávený čas na projektu: Jan Slivka
 |    Den   | Čas | Info |
 | -------- | -------- | --------|
@@ -86,6 +102,22 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 > Nakreslení základního layoutu.
 > 
 > Vybrat hlavní theme barev, fontů a frameworků.
+
+- Listopad
+
+> ...
+> 
+> ...
+> 
+> ...
+
+- Prosinec
+
+> ...
+> 
+> ...
+> 
+> ...
 
 #### Celkově strávený čas na projektu: Tomáš Menšík
 | Den  | Čas  | Info |
