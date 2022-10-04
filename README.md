@@ -24,6 +24,14 @@ Pro každého, kdo si myslí, že ze svého dne může "vymáčknout" více, ne�
 **3.** Lze také sdílet mezi ostatními za pomocí chatu
 
 
+## Rozdělení práce
+- Tomáš Menšík
+> Zaměrovat se výhradně na mobilní vývoj aplikace a celkového frontendu.
+
+- Honza Slivka
+> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivam
+
+
 ## Použité technologie
 - [Python] - počítačový programovací jazyk, který se často používá k vytváření webových stránek a softwaru.
 - [HTML/CSS] - jedna ze základních technologií pro tvorbu webových stránek
@@ -67,9 +75,11 @@ Pro každého, kdo si myslí, že ze svého dne může "vymáčknout" více, ne�
 
 
 ## Celkově strávený čas na projektu:
-| Den  | Počet hodin |
-| --------- | -----:|
-| 3.10 2022  |  1 hodina |
+| Den  | Tomáš Menšík | Honza Slivka | Info |
+| --------- | --------| --------| -----:|
+| 30.9.2022 | 4 hodiny | 0 hodin | Seznámování s projektem a problémy v něm |
+| 3.10 2022  |  0 hodin | 1 hodina | XXX |
+| 4.10.2022 | 1 hodina | 1 hodina | Napsání Github repozitáře |
 
 
 ## Instalace
