@@ -5,26 +5,21 @@
 
 
 ## Popis práce
-Vytvoření webové aplikace, která bude sloužit studentům 4 ročníku oboru informačních technologií SŠPU v Opavě ke správě, organizaci a celkově *"Manegementu"* svého projektu, ať už na něm pracují ve skupinách, či samostatně. 
-Aplikace by měla být přehledá, srozumitelná a hlavně užitečná.
-Projekt se zaměřuje na lepší plánování, příjemnost a úsporu času.
+Vytvoření webové aplikace, která bude sloužit studentům z 4. ročníků v oboru IT na SŠPU v Opavě ke správě, organizaci a celkově managementu svých projektů. Ať už na něm pracují ve skupinách či samostatně. Projekt se zaměřuje na lepší plánování, příjemnost a úsporu času.
 
 
 
 ## Cíl práce
-Naprogramovat funkční webovou aplikací, která je schopna být publikovaná na naší škole.
-Naučit se nové technologie (většinou nové frameworky a knihovny), ve kterých budeme programovat závěrečný projekt. 
+Naprogramovat funkční webovou aplikací, která je schopna být publikovaná na naší škole. Aplikace by měla být přehledná, srozumitelná a hlavně užitečná. Naučit se nové technologie (většinou nové frameworky a knihovny), ve kterých budeme programovat závěrečný projekt. 
 
 
 ## Pro koho je projekt určen?
-- Pro studenty 4 ročníku informační technologie, které čeká maturitní projekt a potřebují pomoc v organizaci.
-- Dále pro učitele, kteří mohou kontrolovat stav maturitních projektů studentů za pochodu.
 
-> **1.** Chce si organizovat projekt, ale nemá na to prostředky.
-> 
-> **2.** Mít všechny informace o svém projektu přehledně na jednom místě.  
-> 
-> **3.** Lze také komunikovat mezi ostatními účastníky projektu za pomocí chatu.
+**1.** Pro studenty z 4. ročníků v oboru IT na SŠPU v Opavě, které čeká závěrečný projekt a potřebují pomoc v organizaci.
+ 
+**2.** Pro učitelé, kteří mohou kontrolovat stav závěrečných projektů svých studentů v reálném čase (aktivita, stav, výsledky).   
+ 
+**3.** Pro veřejnost (not yet).
 
 
 ## Rozdělení práce
@@ -34,12 +29,12 @@ Naučit se nové technologie (většinou nové frameworky a knihovny), ve který
 - Jan Slivka
 > Zaměření na backend (Databáze, funkčnost)
 
-## Backend
+## Backend - Jan Slivka
 #### Použité technologie:
 - [Python] - počítačový programovací jazyk, který se často používá k vytváření webových stránek a softwaru.
-- [Django]-je open source (webový aplikační framework) napsaný v Pythonu, který se volně drží architektury Model-Pohled-Šablona (Model-View-Template)
+- [Django]- open source webový aplikační framework napsaný v Pythonu, který se volně drží architektury Model-Pohled-Šablona (Model-View-Template).
 - [ GraphQL] -  GraphQL je dotazovací jazyk pro API a běhové prostředí pro plnění těchto dotazů.
-- [Docker] - otevřená platforma pro vývoj, dodávání a provozování aplikací
+- [Docker] - otevřená platforma pro vývoj, dodávání a provozování aplikací.
 
 
 #### Zdroje a tutoriály:
@@ -49,7 +44,9 @@ Naučit se nové technologie (většinou nové frameworky a knihovny), ve který
 | Youtube - Python Tutorial | [Click here](https://www.youtube.com/watch?v=rfscVS0vtbw) |
 | Youtube - Django Tutorial | [Click here](https://www.youtube.com/watch?v=F5mRW0jo-U4) |
 | Stackoverflow - většina problémů | [Click here](https://stackoverflow.com/) |
-| hygraph - REST API VS GraphQL | [Click here](https://www.section.io/engineering-education/integrating-graphql-api-in-a-django-application/) |
+| Hygraph - REST API VS GraphQL | [Click here](https://www.section.io/engineering-education/integrating-graphql-api-in-a-django-application/) |
+
+
 #### Časový harmonogram:
 - Říjen
 
@@ -58,6 +55,8 @@ Naučit se nové technologie (většinou nové frameworky a knihovny), ve který
 > -Vytvořit databázi
 > 
 > -Vypsat základní data
+
+
 #### Celkově strávený čas na projektu: Jan Slivka
 |    Den   | čas | Info |
 | -------- | -------- | --------|
@@ -65,7 +64,7 @@ Naučit se nové technologie (většinou nové frameworky a knihovny), ve který
 | 3.10 2022| 2 hodina | Vymýšlení projektu a hledání informací |
 | 4.10.2022| 4 hodina | Napsání Github repozitáře, rozvržení projektu, hledání technologií |
 
-## Frontend
+## Frontend - Tomáš Menšík
 #### Použité technologie:
 
 - [HTML/CSS] - jedna ze základních technologií pro tvorbu webových stránek
