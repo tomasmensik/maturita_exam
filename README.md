@@ -75,9 +75,10 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 #### Celkově strávený čas na projektu: Jan Slivka
 |    Den   | Čas | Info |
 | -------- | -------- | --------|
-| 30.9.2022| 1 hodin | Seznámování s projektem a problémy v něm |
-| 3.10 2022| 2 hodina | Vymýšlení projektu a hledání informací |
-| 4.10.2022| 4 hodina | Napsání Github repozitáře, rozvržení projektu, hledání technologií |
+| 30.9.2022| 1 hodina | Seznámování s projektem a problémy v něm |
+| 3.10 2022| 2 hodiny | Vymýšlení projektu a hledání informací |
+| 4.10.2022| 4 hodiny | Napsání Github repozitáře, rozvržení projektu, hledání technologií |
+| 15.10.2022| 4 hodiny | Vytváření ERA diagrami |
 
 ## Frontend - Tomáš Menšík
 #### Použité technologie:
