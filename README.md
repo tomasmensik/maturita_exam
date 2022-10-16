@@ -79,6 +79,8 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 | 3.10 2022| 2 hodiny | Vymýšlení projektu a hledání informací |
 | 4.10.2022| 4 hodiny | Napsání Github repozitáře, rozvržení projektu, hledání technologií |
 | 15.10.2022| 4 hodiny | Vytváření ERA diagrami |
+| 16.10.2022| 1 hodiny | -||- |
+
 
 ## Frontend - Tomáš Menšík
 #### Použité technologie:
