@@ -1,70 +1,145 @@
-# Getting Started with Create React App
+# Organizátor maturitních projektů
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Maturitní projekt 2022 SŠPU-Opava
 
-## Available Scripts
+##### Jan Slivka, Tomáš Menšík
 
-In the project directory, you can run:
+## Popis práce
 
-### `npm start`
+Vytvoření webové aplikace, která bude sloužit studentům z 4. ročníků v oboru IT na SŠPU v Opavě ke správě, organizaci a celkově managementu svých projektů. Ať už na něm pracují ve skupinách či samostatně. Projekt se zaměřuje na lepší plánování, příjemnost a úsporu času.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Cíl práce
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Naprogramovat funkční webovou aplikací, která je schopna být publikovaná na naší škole. Aplikace by měla být přehledná, srozumitelná a hlavně užitečná. Naučit se nové technologie (většinou nové frameworky a knihovny), ve kterých budeme programovat závěrečný projekt.
 
-### `npm test`
+## Pro koho je projekt určen?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**1.** Pro studenty z 4. ročníků v oboru IT na SŠPU v Opavě, které čeká závěrečný projekt a potřebují pomoc v organizaci.
 
-### `npm run build`
+**2.** Pro učitelé, kteří mohou kontrolovat stav závěrečných projektů svých studentů v reálném čase (aktivita, stav, výsledky).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**3.** Pro veřejnost (not yet).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Rozdělení práce
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Tomáš Menšík
 
-### `npm run eject`
+  > Zaměření na frontend (Vzhled aplikace).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Jan Slivka
+  > Zaměření na backend (Databáze, funkčnost)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Backend - Jan Slivka
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Použité technologie:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [Python] - počítačový programovací jazyk, který se často používá k vytváření webových stránek a softwaru.
+- [Django]- open source webový aplikační framework napsaný v Pythonu, který se volně drží architektury Model-Pohled-Šablona (Model-View-Template).
+- [ GraphQL] - GraphQL je dotazovací jazyk pro API a běhové prostředí pro plnění těchto dotazů.
+- [Github] - platforma pro správu verzí a spolupráci v týmu.
 
-## Learn More
+#### Zdroje a tutoriály:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| Zdroj                            | Odkaz                                                                                                       |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Youtube - Python Tutorial        | [Click here](https://www.youtube.com/watch?v=rfscVS0vtbw)                                                   |
+| Youtube - Django Tutorial        | [Click here](https://www.youtube.com/watch?v=F5mRW0jo-U4)                                                   |
+| Stackoverflow - většina problémů | [Click here](https://stackoverflow.com/)                                                                    |
+| Hygraph - REST API VS GraphQL    | [Click here](https://www.section.io/engineering-education/integrating-graphql-api-in-a-django-application/) |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Časový harmonogram:
 
-### Code Splitting
+- Říjen
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+> Rozvržení projektu, vytvoření Readme.md
+>
+> Vytvoření databáze.
+>
+> Vypsání základních dat.
 
-### Analyzing the Bundle Size
+- Listopad
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+> ...
+>
+> ...
+>
+> ...
 
-### Making a Progressive Web App
+- Prosinec
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+> ...
+>
+> ...
+>
+> ...
 
-### Advanced Configuration
+#### Celkově strávený čas na projektu: Jan Slivka
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+| Den       | Čas      | Info                                                               |
+| --------- | -------- | ------------------------------------------------------------------ |
+| 30.9.2022 | 1 hodin  | Seznámování s projektem a problémy v něm                           |
+| 3.10 2022 | 2 hodina | Vymýšlení projektu a hledání informací                             |
+| 4.10.2022 | 4 hodina | Napsání Github repozitáře, rozvržení projektu, hledání technologií |
 
-### Deployment
+## Frontend - Tomáš Menšík
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+#### Použité technologie:
 
-### `npm run build` fails to minify
+- [HTML/CSS] - jedna ze základních technologií pro tvorbu webových stránek.
+- [Javascript] - dynamický programovací jazyk, který se používá pro vývoj webových stránek, webových aplikací nebo her.
+- [React] - knihovna pro tvorbu uživatelského rozhraní.
+- [MaterialUi] - knihovna, která nám umožňuje importovat a používat různé komponenty pro vytvoření UI v Reactu.
+- [Tailwind] - zrychluje psaní a údržbu kódu v aplikaci.
+- [Github] - platforma pro správu verzí a spolupráci v týmu.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Zdroje a tutoriály:
+
+| Zdroj                                                        | Odkaz                                                                                                 |
+| ------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| Stackoverflow - většina problémů                             | [Click here](https://stackoverflow.com/)                                                              |
+| Youtube - Python Tutorial                                    | [Click here](https://www.youtube.com/watch?v=rfscVS0vtbw)                                             |
+| Youtube - Django Tutorial                                    | [Click here](https://www.youtube.com/watch?v=F5mRW0jo-U4)                                             |
+| Youtube - React Tutorial                                     | [Click here](https://www.youtube.com/watch?v=bMknfKXIFA8)                                             |
+| Tailwindcss - Gradient barev z jedné barvy (ctrl k + ctrl g) | [Click here](https://tailwindcss.com/docs/customizing-colors)                                         |
+| Bobbyhadz - Fix na error duplicitních knihoven v Reactu      | [Click here](https://bobbyhadz.com/blog/react-invalid-hook-call-hooks-can-only-be-called-inside-body) |
+
+#### Časový harmonogram:
+
+- Říjen
+
+> Rozvržení projektu, vytvoření Readme.md
+>
+> Nakreslení základního layoutu.
+>
+> Vybrat hlavní theme barev, fontů a frameworků.
+>
+> Funkční navbar, sidebar a footer
+
+- Listopad
+
+> ...
+>
+> ...
+>
+> ...
+
+- Prosinec
+
+> ...
+>
+> ...
+>
+> ...
+
+#### Celkově strávený čas na projektu: Tomáš Menšík
+
+| Den        | Čas      | Info                                                               |
+| ---------- | -------- | ------------------------------------------------------------------ |
+| 12.9.2022  | ~5 hodin | Základy Pythonu a Django frameworku - tutoriál                     |
+| 30.9.2022  | 4 hodiny | Seznámování s projektem a problémy v něm                           |
+| 4.10.2022  | 1 hodina | Napsání Github repozitáře, rozvržení projektu, hledání technologií |
+| 9.10.2022  | 2 hodiny | Navbar v reactu - 1.0                                              |
+| 27.10.2022 | 1 hodina | Navbar v reactu (animace) - 1.1                                    |
+| 27.10.2022 | 3 hodiny | Navbar v reactu (Fixování bugů - animace otevírání) - 1.2          |
+| 29.10.2022 | ~5 hodin | Učení se Tailwindu a pokročilejšího Reactu - tutoriál              |
+| 30.10.2022 | ~8 hodin | Navbar v reactu (kompletně nový navbar) - 2.0                      |
