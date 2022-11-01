@@ -143,3 +143,12 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 | 27.10.2022 | 3 hodiny | Navbar v reactu (Fixování bugů - animace otevírání) - 1.2          |
 | 29.10.2022 | ~5 hodin | Učení se Tailwindu a pokročilejšího Reactu - tutoriál              |
 | 30.10.2022 | ~8 hodin | Navbar v reactu (kompletně nový navbar) - 2.0                      |
+
+
+#### Instalace a spuštění
+- cd C:
+- cd Users\ [name] \Desktop
+- git clone https://github.com/tomasmensik/maturita_exam.git
+- cd maturita_exam
+- npm install
+- npm run start
