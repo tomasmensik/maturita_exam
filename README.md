@@ -143,6 +143,7 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 | 27.10.2022 | 3 hodiny | Navbar v reactu (Fixování bugů - animace otevírání) - 1.2          |
 | 29.10.2022 | ~5 hodin | Učení se Tailwindu a pokročilejšího Reactu - tutoriál              |
 | 30.10.2022 | ~8 hodin | Navbar v reactu (kompletně nový navbar) - 2.0                      |
+| 7.11.2022 | 4 hodiny | Sidebar v reactu - 1.0                                              |
 
 
 #### Instalace a spuštění
