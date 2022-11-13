@@ -82,6 +82,8 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 | 16.10.2022 | 1 hodiny | -                                                                  ||- |
 | 18.10.2022 | 2 hodiny | Vytváření kostry djanga a studování                                |
 | 29.10.2022 | 3 hodiny | Úprava ER diagramu a studování djanga                              |
+| 12.11.2022 | 2 hodiny | Úprava ER diagramu a studování djanga                              |
+| 29.10.2022 | 3 hodiny | Úprava ER diagramu a příprava djanga modelu                        |
 
 
 ## Frontend - Tomáš Menšík
