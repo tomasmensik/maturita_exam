@@ -11,7 +11,7 @@ class PROJECT(models.Model):
                                 help_text='Zadejte strucny popis projektu', verbose_name="popis")
 
     def __str__(self):
-        return f"Nazev projektu {self.pro_name}"
+        return f"{self.pro_name}"
 
 class ASSESSEMENT(models.Model):
 
@@ -32,7 +32,7 @@ class ASSESSEMENT(models.Model):
 
     project_id = models.ForeignKey(PROJECT, on_delete=models.CASCADE)
     def __str__(self):
-        return f"Hodnoceni projektu{self.pro_name}"
+        return f"{self.project_id} známka: {self.as_mark}"
 
 
 class ISSUES_CLASS(models.Model):
@@ -48,7 +48,7 @@ class ISSUES_CLASS(models.Model):
 
     project_id = models.ManyToManyField(PROJECT, help_text="Pro jaky projekt je trida urcena", verbose_name="projekt")
 
-    class_image = models.ImageField(upload_to='uploads/Issue_class/%Y/%m/%d/', null=True, verbose_name="Ilustracni foto")
+    class_image = models.ImageField(upload_to='uploads/Issue_class/%Y/%m/%d/', null=True, blank=True, verbose_name="Ilustracni foto")
     def __str__(self):
         return f"{self.issues_class_name}"
 
@@ -57,14 +57,13 @@ class ISSUES(models.Model):
     issue_name = models.CharField(max_length=45, blank=False,
                                 help_text='Zadejte nazev pro tridu ukolu', verbose_name="Nazev pro tridu ukolu")
 
-    issue_color = models.CharField(max_length=45, blank=False, default="rgb(255,255,255)",
-                                help_text='Zadejte  barvu ve tvaru: rgb(255,255,255)', verbose_name="barva pro tridu ukolu")
+    is_done = models.BooleanField(default=False, help_text="Je Issue hotov? ANO, NE")
 
     issue_detail = models.TextField(blank=True,
                                 help_text='Zadejte strucny popis tridy pro ukoly', verbose_name="popis")
 
     issues_class = models.ManyToManyField(ISSUES_CLASS, help_text="Pro jakou tridu ma byt issue urcen", verbose_name="trida")
 
-    class_image = models.ImageField(upload_to='uploads/Issue/%Y/%m/%d/', null=True, verbose_name="Ilustracni foto")
+    class_image = models.ImageField(upload_to='uploads/Issue/%Y/%m/%d/', null=True, blank=True, verbose_name="Ilustracni foto")
     def __str__(self):
-        return f"{self.issues_class_name}"
+        return f"{self.issue_name}"
