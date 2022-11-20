@@ -1,5 +1,7 @@
+from django.contrib.auth.models import User
 from django.db import models
-
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 
 class PROJECT(models.Model):
@@ -67,3 +69,25 @@ class ISSUES(models.Model):
     class_image = models.ImageField(upload_to='uploads/Issue/%Y/%m/%d/', null=True, blank=True, verbose_name="Ilustracni foto")
     def __str__(self):
         return f"{self.issue_name}"
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    bio = models.TextField(max_length=500, blank=True)
+    birth_date = models.DateField(null=True, blank=True)
+    profile_name = models.CharField(max_length=45, blank=False,
+                                help_text='Zadejte jmeno uzivatele', verbose_name="Jmeno")
+    profile_surname = models.CharField(max_length=45, blank=False,
+                                    help_text='Zadejte prijmeni uzivatele', verbose_name="Prijmeni")
+    profile_git = models.CharField(max_length=200, blank=False,
+                                help_text='Zadejte link na github', verbose_name="Github")
+    profile_time = models.TimeField(null=True, blank=True, help_text="Zadejte cas straveny na projektu", verbose_name="Cas")
+    profile_foto = models.ImageField(upload_to='uploads/Profile_images/%Y/%m/%d/', null=True, blank=True,
+                                    verbose_name="Profilova fotografie")
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Profile.objects.create(user=instance)
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    instance.profile.save()
