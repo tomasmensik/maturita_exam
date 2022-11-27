@@ -87,6 +87,7 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 | 17.11.2022 | 5 hodin  | Nastavování Mysql databáze                                         |
 | 19.11.2022 | 1 hodina | Nastavovní djanga s modelem                                        |
 | 20.11.2022 | 3 hodiny | Nastavovní djanga s modelem a studování                            |
+| 27.11.2022 | 3 hodiny | Upravování modelu a připravování views                             |
 
 
 ## Frontend - Tomáš Menšík
