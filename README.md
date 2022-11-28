@@ -73,13 +73,21 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 > ...
 
 #### Celkově strávený čas na projektu: Jan Slivka
-|    Den   | Čas | Info |
-| -------- | -------- | --------|
-| 30.9.2022| 1 hodina | Seznámování s projektem a problémy v něm |
-| 3.10 2022| 2 hodiny | Vymýšlení projektu a hledání informací |
-| 4.10.2022| 4 hodiny | Napsání Github repozitáře, rozvržení projektu, hledání technologií |
-| 15.10.2022| 4 hodiny | Vytváření ERA diagrami |
-| 16.10.2022| 1 hodiny | -||- |
+| Den        | Čas      | Info                                                               |
+|------------|----------|--------------------------------------------------------------------|
+| 30.9.2022  | 1 hodina | Seznámování s projektem a problémy v něm                           |
+| 3.10 2022  | 2 hodiny | Vymýšlení projektu a hledání informací                             |
+| 4.10.2022  | 4 hodiny | Napsání Github repozitáře, rozvržení projektu, hledání technologií |
+| 15.10.2022 | 4 hodiny | Vytváření ERA diagrami                                             |
+| 16.10.2022 | 1 hodina | -                                                                  ||- |
+| 18.10.2022 | 2 hodiny | Vytváření kostry djanga a studování                                |
+| 29.10.2022 | 3 hodiny | Úprava ER diagramu a studování djanga                              |
+| 12.11.2022 | 2 hodiny | Úprava ER diagramu a studování djanga                              |
+| 29.10.2022 | 3 hodiny | Úprava ER diagramu a příprava djanga modelu                        |
+| 17.11.2022 | 5 hodin  | Nastavování Mysql databáze                                         |
+| 19.11.2022 | 1 hodina | Nastavovní djanga s modelem                                        |
+| 20.11.2022 | 3 hodiny | Nastavovní djanga s modelem a studování                            |
+| 27.11.2022 | 3 hodiny | Upravování modelu a připravování views                             |
 
 
 ## Frontend - Tomáš Menšík
