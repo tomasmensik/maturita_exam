@@ -109,7 +109,7 @@ const Sidebar = () => {
                   Marek Zuck
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                  Robot (jo.)
+                  Robot
                 </Typography>
               </Box>
             </Box>
@@ -132,7 +132,7 @@ const Sidebar = () => {
               Data
             </Typography>
             <Item
-              title="Manage Team"
+              title="Manage Students"
               to="/team"
               icon={<PeopleOutlinedIcon />}
               selected={selected}

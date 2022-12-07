@@ -7,7 +7,7 @@ const Dashboard = () => {
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header
           title="DASHBOARD"
-          subtitle="Zdarec, jeste nevim jestli mam psat v cz nebo eng :-)"
+          subtitle="Jeste nevim, jestli mam psat v cz nebo eng."
         ></Header>
       </Box>
     </Box>

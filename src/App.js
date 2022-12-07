@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
 import Dashboard from "./scenes/dashboard";
-//import Team from "./scenes/team";
+import Team from "./scenes/team";
 //import RandomNazev1 from "./scenes/randomnazev1";
 //import RandomNazev2 from "./scenes/randomnazev2";
 //import Bar from "./scenes/bar";
@@ -27,7 +27,7 @@ function App() {
             <Topbar />
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              {/*<Route path="/team" element={<Team />} />*/}
+              <Route path="/team" element={<Team />} />
               {/*<Route path="/randomnazev1" element={<RandomNazev1 />} />*/}
               {/*<Route path="/randomnazev2" element={<RandomNazev2 />} />*/}
               {/*<Route path="/profile" element={<Profile />} />*/}
