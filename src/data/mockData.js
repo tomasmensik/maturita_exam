@@ -7,7 +7,7 @@ export const mockDataTeam = [
     email: "jonsnow@gmail.com",
     age: 35,
     github: "github.com/tomasmensik",
-    access: "Networker",
+    student: "Networker",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const mockDataTeam = [
     email: "cerseilannister@gmail.com",
     age: 42,
     github: "github.com/tomasmensik",
-    access: "Programmer",
+    student: "Programmer",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ export const mockDataTeam = [
     email: "jaimelannister@gmail.com",
     age: 45,
     github: "github.com/tomasmensik",
-    access: "Programmer",
+    student: "Programmer",
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ export const mockDataTeam = [
     email: "anyastark@gmail.com",
     age: 16,
     github: "github.com/tomasmensik",
-    access: "Networker",
+    student: "Networker",
   },
   {
     id: 5,
@@ -39,7 +39,7 @@ export const mockDataTeam = [
     email: "daenerystargaryen@gmail.com",
     age: 31,
     github: "github.com/tomasmensik",
-    access: "Programmer",
+    student: "Programmer",
   },
   {
     id: 6,
@@ -47,7 +47,7 @@ export const mockDataTeam = [
     email: "evermelisandre@gmail.com",
     age: 150,
     github: "github.com/tomasmensik",
-    access: "Programmer",
+    student: "Programmer",
   },
   {
     id: 7,
@@ -55,7 +55,7 @@ export const mockDataTeam = [
     email: "github.com/tomasmensik",
     age: 44,
     github: "github.com/tomasmensik",
-    access: "Programmer",
+    student: "Programmer",
   },
   {
     id: 8,
@@ -63,7 +63,7 @@ export const mockDataTeam = [
     email: "rossinifrances@gmail.com",
     age: 36,
     github: "github.com/tomasmensik",
-    access: "Programmer",
+    student: "Programmer",
   },
   {
     id: 9,
@@ -71,7 +71,7 @@ export const mockDataTeam = [
     email: "harveyroxie@gmail.com",
     age: 65,
     github: "github.com/tomasmensik",
-    access: "Networker",
+    student: "Networker",
   },
 ];
 

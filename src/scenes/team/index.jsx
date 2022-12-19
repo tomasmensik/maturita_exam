@@ -35,10 +35,10 @@ const Team = () => {
       flex: 1,
     },
     {
-      field: "accessLevel",
-      headerName: "Type of student",
+      field: "student",
+      headerName: "Student",
       flex: 1,
-      renderCell: ({ row: { access } }) => {
+      renderCell: ({ row: { student } }) => {
         return (
           <Box
             width="60%"
@@ -46,18 +46,18 @@ const Team = () => {
             display="flex"
             justifyContent="center"
             backgroundColor={
-              access === "Programmer"
+              student === "Programmer"
                 ? colors.greenAccent[800]
-                : access === "Networker"
+                : student === "Networker"
                 ? colors.greenAccent[700]
                 : colors.greenAccent[700]
             }
             borderRadius="4px"
           >
-            {access === "Programmer" && <LaptopChromebookIcon />}
-            {access === "Networker" && <NetworkCheckIcon />}
+            {student === "Programmer" && <LaptopChromebookIcon />}
+            {student === "Networker" && <NetworkCheckIcon />}
             <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
-              {access}
+              {student}
             </Typography>
           </Box>
         );
