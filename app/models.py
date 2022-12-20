@@ -1,4 +1,5 @@
 from django.contrib.auth.models import User
+from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
@@ -9,6 +10,7 @@ class ISSUES(models.Model):
 
     issue_name = models.CharField(max_length=45, blank=False,
                                 help_text='Zadejte nazev pro tridu ukolu', verbose_name="Nazev pro tridu ukolu")
+    deadline = models.DateField(null=True, blank=True, help_text="Zadejte, dokdy musi byt issue zhotoven", verbose_name="datum")
 
     is_done = models.BooleanField(default=False, help_text="Je Issue hotov? ANO, NE", verbose_name="Hotov")
 
@@ -23,7 +25,7 @@ class ISSUES(models.Model):
 
 class ISSUES_CLASS(models.Model):
     issues_class = models.ManyToManyField(ISSUES, help_text="Pridat issue",
-                                          verbose_name="issues")
+                                          verbose_name="issues", null=True, blank=True,)
     issues_class_name = models.CharField(max_length=45, blank=False,
                                 help_text='Zadejte nazev pro tridu ukolu', verbose_name="Nazev pro tridu ukolu")
 
@@ -38,7 +40,7 @@ class ISSUES_CLASS(models.Model):
     def __str__(self):
         return f"{self.issues_class_name}"
 class PROJECT(models.Model):
-    project_issue_call = models.ManyToManyField(ISSUES_CLASS, help_text="Vytvoreni tridy pro issues", verbose_name="trida pro issue")
+    project_issue_call = models.ManyToManyField(ISSUES_CLASS, help_text="Vytvoreni tridy pro issues", verbose_name="trida pro issue",  null=True, blank=True)
 
     pro_name = models.CharField(max_length=45, blank=False,
                                 help_text='Zadejte nazev projektu', verbose_name="Nazev")
@@ -52,7 +54,7 @@ class PROJECT(models.Model):
 class ASSESSEMENT(models.Model):
 
     as_percent = models.FloatField(blank=True, null=True, help_text=" Zadejte hodnoceni v procentech",
-                                     verbose_name="Procenta hodnoceni")
+                                     verbose_name="Procenta hodnoceni",validators=[MinValueValidator(0.0), MaxValueValidator(100.0)])
 
     MARKS = (
         ('1', '1'),
@@ -66,7 +68,7 @@ class ASSESSEMENT(models.Model):
     as_mark = models.CharField(max_length=1, choices=MARKS, blank=True,
                                 help_text='Zadejte znamku za projekt', verbose_name="Znamka")
 
-    project_id = models.ForeignKey(PROJECT, on_delete=models.CASCADE)
+    project_id = models.ForeignKey(PROJECT, on_delete=models.CASCADE, verbose_name="projekt")
     def __str__(self):
         return f"{self.project_id} známka: {self.as_mark}"
 
@@ -75,8 +77,10 @@ class ASSESSEMENT(models.Model):
 
 
 class Profile(models.Model):
-    profile_project = models.ManyToManyField(PROJECT, help_text="Na jakem projektu bude pracovat", verbose_name="projekt",null=True, blank=True )
+    profile_project = models.ManyToManyField(PROJECT, help_text="Na jakem projektu bude pracovat", verbose_name="projekt",null=True, blank=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, default=1)
+    id_profile = models.CharField(max_length=10, blank=False,
+                                help_text='Zadejte id studenta', verbose_name="priklad:it1987", default="itstudent")
     bio = models.TextField(max_length=500, blank=True)
     birth_date = models.DateField(null=True, blank=True)
 

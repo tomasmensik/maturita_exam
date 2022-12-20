@@ -1,0 +1,37 @@
+version: "3"
+services:
+  db:
+    image: mysql:8
+
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_DATABASE: 'django_backend'
+      MYSQL_USER: 'django'
+      MYSQL_PORT: '3307'
+      MYSQL_PASSWORD: 'mysql1234pass'
+      MYSQL_ROOT_PASSWORD: 'password'
+    container_name: mysql_server
+  app:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
+    image: app:django
+    depends_on:
+      - db
+    links:
+      - db
+    container_name: django_backend
+
+    command:
+      - /bin/bash
+      - -c
+      - |
+       
+        python3 manage.py migrate
+        python3 manage.py runserver 0.0.0.0:8000
+
+
+
