@@ -12,3 +12,4 @@ sqlparse==0.4.3
 tzdata==2022.7
 urllib3==1.26.13
 yarg==0.1.9
+npm==0.1.1
