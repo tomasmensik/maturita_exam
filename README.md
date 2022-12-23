@@ -145,6 +145,10 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 | 30.10.2022 | ~8 hodin | Navbar v reactu (kompletně nový navbar) - 2.0                      |
 | 7.11.2022  | 4 hodiny | Sidebar v reactu - 1.0                                             |
 | 7.12.2022  | 3 hodiny | Scenes - Manage Team                                               |
+| 19.12.2022 | 1 hodina | Fix - manage students filter                                       |
+| 23.12.2022 | 1 hodina | Poznámky programátora                                              |
+| 23.12.2022 | 3 hodiny | Scenes - Calendar                                                  |
+| 23.12.2022 | 2 hodiny | Scenes - FAQ                                                       |
 
 #### Instalace a spuštění
 
