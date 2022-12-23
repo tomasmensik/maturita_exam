@@ -1,4 +1,8 @@
+//Importovani 'tokens' nam umoznuje pouzivat tokeny na pouzite themes.
+
 import { tokens } from "../theme";
+
+//Toto jsou mock data, ktera pouzivam pro vypsani studentu. Nemam jeste hotovy backend od Honzy, tak tu mam natvrdo data.
 
 export const mockDataTeam = [
   {

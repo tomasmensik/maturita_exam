@@ -1,3 +1,11 @@
+//Importovani 'Box' komponenty nam slouzi jako wrapper pro vetsinu potrebnych nastroju CSS.
+//Importovani 'Typography' komponenty nam usnadnuje pouziti font weights a font sizes.
+//Importovani 'useTheme' komponenty nam umozni menit barvy, typografii a mnoho dalsiho.
+//Importovani 'tokens' nam umoznuje pouzivat tokeny na pouzite themes.
+//Importovani 'mockDataTeam' nam umozni pouzivat nase predem predpripravene data.
+//Importovani '...Icon' nam importuje ikonku.
+//Importovani 'Header' komponenty nam umozni pouzivat funkce v souboru 'Header.jsx'.
+
 import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
@@ -5,6 +13,10 @@ import { mockDataTeam } from "../../data/mockData";
 import LaptopChromebookIcon from "@mui/icons-material/LaptopChromebook";
 import NetworkCheckIcon from "@mui/icons-material/NetworkCheck";
 import Header from "../../components/Header";
+
+//Tato arrow Team() function nam umozni vygenerovat "team" studentu. Diky teto tabulce muze admin managovat se studenty.
+//Nejprve si vytvorime nase sloupce (neboli hlavicku) a napise jednotlive nazvy.
+//Pomoci rendercell() funkce vyrenderujeme jednotlive studenty a nastavime barvu podle toho, jestli jsou programatori nebo sitari.
 
 const Team = () => {
   const theme = useTheme();

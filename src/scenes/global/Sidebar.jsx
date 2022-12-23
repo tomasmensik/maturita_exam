@@ -1,3 +1,13 @@
+//Importovani 'useState' komponenty umoznuje vyvojarovi snadno aktualizovat hodnotu konstanty pomoci funkce.
+//Importovani 'ProSidebar', 'Menu', 'MenuItem' komponent nam poskytuje sadu funkci pro vytvareni vysokourovnove a prizpusobitelne "side" navigace.
+//Importovani 'Box' komponenty nam slouzi jako wrapper pro vetsinu potrebnych nastroju CSS.
+//Importovani 'IconButton' komponenty nam umozni pouzivat ikonku vytistenou na widgetu, ktera reaguje na dotyky.
+//Importovani 'Typography' komponenty nam usnadnuje pouziti font weights a font sizes.
+//Importovani 'useTheme' komponenty nam umozni menit barvy, typografii a mnoho dalsiho.
+//Importovani 'Link' kompnenty nam umozni routovat mezi strankami.
+//Importovani 'tokens' nam umoznuje pouzivat tokeny na pouzite themes.
+//Importovani '...Icon' nam importuje ikonku.
+
 import { useState } from "react";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
@@ -16,6 +26,9 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 
+//Tato arrowe Item() function nam umozni preklikavat mezi jednotlivymi itemvy v side navigaci. 
+//Nakliknuty item zmeni barvu a presmeruje nas na spravy route path.
+
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -33,6 +46,9 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
     </MenuItem>
   );
 };
+
+//Tato arrow Sidebar() function nam vygeneruje jednotlive itemy na side (bocni) navigaci. Kazdy tento item mas sve CSS styly a nazvy skryte v parametrech promenne.
+//Je rozdelen na default Dashboard a dalsi 3 sekce, kde kazda z nich ma sve 3 dalsi podsekce.
 
 const Sidebar = () => {
   const theme = useTheme();

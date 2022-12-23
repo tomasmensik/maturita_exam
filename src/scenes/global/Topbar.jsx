@@ -1,3 +1,9 @@
+//Importovani 'Box' komponenty nam slouzi jako wrapper pro vetsinu potrebnych nastroju CSS.
+//Importovani 'IconButton' komponenty nam umozni pouzivat ikonku vytistenou na widgetu, ktera reaguje na dotyky.
+//Importovani 'useTheme' komponenty nam umozni menit barvy, typografii a mnoho dalsiho.
+//Importovani 'ColorModeContext' a 'tokens' nam umozni menit mezi light modem a dark modem.
+//Importovani '...Icon' nam importuje ikonku.
+
 import { Box, IconButton, useTheme } from "@mui/material";
 import { useContext } from "react";
 import { ColorModeContext, tokens } from "../../theme";
@@ -8,6 +14,9 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchIcon from "@mui/icons-material/Search";
+
+//Tato arrow Topbar() function nam vygeneruje celou horni listu. Kazda jednotliva sekce ma jine CSS styly.
+//Na teto horni liste mame napriklad search bar nebo ikonky, co meni theme (light mode a dark mode).
 
 const Topbar = () => {
   const theme = useTheme();
