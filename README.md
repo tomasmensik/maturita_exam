@@ -149,6 +149,7 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 | 23.12.2022 | 1 hodina | Poznámky programátora                                              |
 | 23.12.2022 | 3 hodiny | Scenes - Calendar                                                  |
 | 23.12.2022 | 2 hodiny | Scenes - FAQ                                                       |
+| 24.12.2022 | 4 hodiny | Scenes - Pie Chart, Bar Chart, Line Chart                          |
 
 #### Instalace a spuštění
 
