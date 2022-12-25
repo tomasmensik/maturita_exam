@@ -1,3 +1,6 @@
+//BrowserRouter nam umozni pouzivat Reactove routovani a setupovani routes
+
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";

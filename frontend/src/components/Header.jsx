@@ -1,5 +1,11 @@
+//Importovani 'Typography' komponent nam usnadnuje pouziti font weights a font sizes.
+//Importovani 'tokens' nam umoznuje pouzivat tokeny na pouzite themes.
+
 import { Typography, Box, useTheme } from "@mui/material";
 import { tokens } from "../theme";
+
+//Tato arrow Header() function nam vygeneruje header div, kde mame zastoupene 2 sekce pro title a subtitle. Obe tyto sekce maji v sobe CSS styly.
+//Vyhoda teto funkce je, ze uz nemusime rucne psat CSS styly a staci ji jenom zavolat a zmenit 2 parametry (title a subtitle).
 
 const Header = ({ title, subtitle }) => {
   const theme = useTheme();

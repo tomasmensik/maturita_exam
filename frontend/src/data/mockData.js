@@ -1,4 +1,8 @@
+//Importovani 'tokens' nam umoznuje pouzivat tokeny na pouzite themes.
+
 import { tokens } from "../theme";
+
+//Toto jsou mock data, ktera pouzivam pro vypsani studentu. Nemam jeste hotovy backend od Honzy, tak tu mam natvrdo data.
 
 export const mockDataTeam = [
   {
@@ -6,72 +10,72 @@ export const mockDataTeam = [
     name: "Jon Snow",
     email: "jonsnow@gmail.com",
     age: 35,
-    phone: "(665)121-5454",
-    access: "admin",
+    github: "github.com/tomasmensik",
+    student: "Networker",
   },
   {
     id: 2,
     name: "Cersei Lannister",
     email: "cerseilannister@gmail.com",
     age: 42,
-    phone: "(421)314-2288",
-    access: "manager",
+    github: "github.com/tomasmensik",
+    student: "Programmer",
   },
   {
     id: 3,
     name: "Jaime Lannister",
     email: "jaimelannister@gmail.com",
     age: 45,
-    phone: "(422)982-6739",
-    access: "user",
+    github: "github.com/tomasmensik",
+    student: "Programmer",
   },
   {
     id: 4,
     name: "Anya Stark",
     email: "anyastark@gmail.com",
     age: 16,
-    phone: "(921)425-6742",
-    access: "admin",
+    github: "github.com/tomasmensik",
+    student: "Networker",
   },
   {
     id: 5,
     name: "Daenerys Targaryen",
     email: "daenerystargaryen@gmail.com",
     age: 31,
-    phone: "(421)445-1189",
-    access: "user",
+    github: "github.com/tomasmensik",
+    student: "Programmer",
   },
   {
     id: 6,
     name: "Ever Melisandre",
     email: "evermelisandre@gmail.com",
     age: 150,
-    phone: "(232)545-6483",
-    access: "manager",
+    github: "github.com/tomasmensik",
+    student: "Programmer",
   },
   {
     id: 7,
     name: "Ferrara Clifford",
-    email: "ferraraclifford@gmail.com",
+    email: "github.com/tomasmensik",
     age: 44,
-    phone: "(543)124-0123",
-    access: "user",
+    github: "github.com/tomasmensik",
+    student: "Programmer",
   },
   {
     id: 8,
     name: "Rossini Frances",
     email: "rossinifrances@gmail.com",
     age: 36,
-    phone: "(222)444-5555",
-    access: "user",
+    github: "github.com/tomasmensik",
+    student: "Programmer",
   },
   {
     id: 9,
     name: "Harvey Roxie",
     email: "harveyroxie@gmail.com",
     age: 65,
-    phone: "(444)555-6239",
-    access: "admin",
+    github: "github.com/tomasmensik",
+    student: "Networker",
   },
 ];
 
@@ -271,49 +275,49 @@ export const mockTransactions = [
     txId: "01e4dsa",
     user: "johndoe",
     date: "2021-09-01",
-    cost: "43.95",
+    cost: "1254",
   },
   {
     txId: "0315dsaa",
     user: "jackdower",
     date: "2022-04-01",
-    cost: "133.45",
+    cost: "145",
   },
   {
     txId: "01e4dsa",
     user: "aberdohnny",
     date: "2021-09-01",
-    cost: "43.95",
+    cost: "435",
   },
   {
     txId: "51034szv",
     user: "goodmanave",
     date: "2022-11-05",
-    cost: "200.95",
+    cost: "295",
   },
   {
     txId: "0a123sb",
     user: "stevebower",
     date: "2022-11-02",
-    cost: "13.55",
+    cost: "135",
   },
   {
     txId: "01e4dsa",
     user: "aberdohnny",
     date: "2021-09-01",
-    cost: "43.95",
+    cost: "45",
   },
   {
     txId: "120s51a",
     user: "wootzifer",
     date: "2019-04-15",
-    cost: "24.20",
+    cost: "220",
   },
   {
     txId: "0315dsaa",
     user: "jackdower",
     date: "2022-04-01",
-    cost: "133.45",
+    cost: "1345",
   },
 ];
 
@@ -849,7 +853,7 @@ export const mockGeographyData = [
     value: 66890,
   },
   {
-    id: "GUY",
+    id: "student",
     value: 719300,
   },
   {
