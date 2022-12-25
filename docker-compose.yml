@@ -3,17 +3,19 @@ version: "3"
 services:
   db:
     image: mysql:8
-
     ports:
-      - 3306:3306
+      - 3307:3306
     environment:
       MYSQL_DATABASE: 'django_backend'
       MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
-#    container_name: mysql_server
-    networks:
-      - django_site
+    healthcheck:
+      test: mysql django_backend --silent --execute "SELECT 1;"
+      interval: 30s
+      timeout: 10s
+      retries: 5 
     volumes:
-      - /db:/var/lib/mysql
+      - /tmp/app/mysqld:/var/run/mysqld
+      - ./db:/var/lib/mysql
     expose:
       - 3306
       - 33060
@@ -21,26 +23,21 @@ services:
   app:
     build: .
     volumes:
-      - .:/django
+      - .:/app
     ports:
       - 8000:8000
-    image: app:django
     depends_on:
-      - db
-    networks:
-      - django_site
+      db:
+        condition: service_healthy
     container_name: django_backend
-
+    restart: always
     command:
       - /bin/bash
       - -c
       - |
        python manage.py migrate
-       python manage.py runserver
+       python manage.py runserver 0.0.0.0:8000
 
-networks:
-  django_site:
-    driver: bridge
 
 
 

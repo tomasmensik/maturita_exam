@@ -1,10 +1,10 @@
 FROM python:3.8
 ENV PYTHONBUFFERED=1
-WORKDIR /django
-COPY requirements.txt requirements.txt
+WORKDIR /app
+COPY requirements.txt /app/requirements.txt
 RUN pip install -r requirements.txt
 
-COPY . .
+COPY . /app
 
 
 
