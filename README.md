@@ -83,7 +83,8 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 | 20.11.2022 | 3 hodiny | Nastavovní djanga s modelem a studování                            |
 | 27.11.2022 | 3 hodiny | Upravování modelu a připravování views                             |
 | 6.12.2022  | 3 hodiny | Propojování frontendu s backendem                                  |
-| 25.12.2022 | 10 hodin | Finální propojování frontendu s backendem a Dockerizace            |
+| 26.12.2022 | 10 hodin | Finální propojování frontendu s backendem a Dockerizace            |
+| 27.12.2022 | 5 hodiny | Setup základy api s Graphql                                        |
 
 
 
@@ -175,6 +176,8 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 >
 > složka, která se generuje po úpravách v části frontend aplikace
 - před commitem smazat složku: /db
+- docker exec -it django_backend bash
+- python manage.py createsuperuser 
 
 
 

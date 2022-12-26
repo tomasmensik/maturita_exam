@@ -90,6 +90,6 @@ class Profile(models.Model):
     profile_foto = models.ImageField(upload_to='uploads/Profile_images/%Y/%m/%d/', null=True, blank=True,
                                     verbose_name="Profilova fotografie")
     def __str__(self):
-        return f"{self.user.first_name} {self.user.last_name}"
+        return f"{self.user.first_name} {self.id_profile}"
 
 
