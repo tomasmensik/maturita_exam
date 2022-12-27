@@ -76,7 +76,7 @@ class ASSESSEMENT(models.Model):
 
 
 
-class Profile(models.Model):
+class PROFILE(models.Model):
     profile_project = models.ManyToManyField(PROJECT, help_text="Na jakem projektu bude pracovat", verbose_name="projekt",null=True, blank=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, default=1)
     id_profile = models.CharField(max_length=10, blank=False,
