@@ -40,6 +40,8 @@ class ISSUES_CLASS(models.Model):
     def __str__(self):
         return f"{self.issues_class_name}"
 class PROJECT(models.Model):
+
+
     project_issue_call = models.ManyToManyField(ISSUES_CLASS, help_text="Vytvoreni tridy pro issues", verbose_name="trida pro issue",  null=True, blank=True)
 
     pro_name = models.CharField(max_length=45, blank=False,
