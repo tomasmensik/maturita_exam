@@ -84,8 +84,8 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 | 27.11.2022 | 3 hodiny | Upravování modelu a připravování views                             |
 | 6.12.2022  | 3 hodiny | Propojování frontendu s backendem                                  |
 | 26.12.2022 | 10 hodin | Finální propojování frontendu s backendem a Dockerizace            |
-| 27.12.2022 | 5 hodiny | Setup základy api s Graphql                                        |
-
+| 26.12.2022 | 5 hodiny | Setup základy api s Graphql                                        |
+| 27.12.2022 | 10 hodin | Setup základy api s Graphql                                        |
 
 
 ## Frontend - Tomáš Menšík
