@@ -4,6 +4,10 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import listPlugin from "@fullcalendar/list";
+import UserList from "../../queries/testTodo";
+
+
+
 import {
   Box,
   List,
@@ -14,6 +18,7 @@ import {
 } from "@mui/material";
 import Header from "../../components/Header";
 import { tokens } from "../../theme";
+
 
 const Calendar = () => {
   const theme = useTheme();
@@ -52,7 +57,8 @@ const Calendar = () => {
         title="Calendar"
         subtitle="You can set appointments... bla bla bla"
       />
-
+    
+    <UserList></UserList>
       <Box display="flex" justifyContent="space-between">
         {/* CALENDAR SIDEBAR */}
         <Box

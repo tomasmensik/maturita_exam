@@ -2,7 +2,7 @@
 
 # dependencies
 ../.idea
-../db/mysql.sock
+../../db
 /node_modules
 /.pnp
 .pnp.js

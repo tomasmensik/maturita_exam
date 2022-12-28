@@ -13,24 +13,13 @@ class Project(DjangoObjectType):
 
     def resolve_profiles(self, info):
         return PROFILEMODEL.objects.filter(profile_project=self)
-"""
-    @classmethod
-    def get_node(cls, info, id):
-        return Project.objects.get(id=id)    
-"""
+
 
 class Profile(DjangoObjectType):
     class Meta:
         model = PROFILEMODEL
         fields = ["id","profile_project","user","id_profile","bio","birth_date","profile_git","profile_time","profile_foto"]
-"""    
-    def resolve_projects(self, info):
-        return PROJECTMODEL.objects.filter(id=self)
 
-    @classmethod
-    def get_node(cls, info, id):
-        return Project.objects.get(id=id) 
-"""
 
 class Query(graphene.ObjectType):
     projects = graphene.List(Project)
@@ -42,6 +31,8 @@ class Query(graphene.ObjectType):
         return PROFILEMODEL.objects.all()
 
 schema = graphene.Schema(query=Query)
+
+
 
 
 
