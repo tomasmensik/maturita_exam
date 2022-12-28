@@ -39,8 +39,15 @@ const BarChart = ({ isDashboard = false }) => {
           },
         },
       }}
-      keys={["hot dog", "burger", "sandwich", "kebab", "fries", "donut"]}
-      indexBy="country"
+      keys={[
+        "Tomáš Menšík",
+        "Honza Slivka",
+        "Martin Kavala",
+        "Lukáš Kůžel",
+        "Ondra Repko",
+        "Patrik Mlčák",
+      ]}
+      indexBy="language"
       margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
       padding={0.3}
       valueScale={{ type: "linear" }}

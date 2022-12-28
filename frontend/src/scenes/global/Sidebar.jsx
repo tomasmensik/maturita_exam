@@ -16,8 +16,8 @@ import "react-pro-sidebar/dist/css/styles.css";
 import { tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
-import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
-import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
+import ChatOutlinedIcon from "@mui/icons-material/ChatOutlined";
+import AutoGraphIcon from "@mui/icons-material/AutoGraph";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
@@ -26,7 +26,7 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 
-//Tato arrowe Item() function nam umozni preklikavat mezi jednotlivymi itemvy v side navigaci. 
+//Tato arrowe Item() function nam umozni preklikavat mezi jednotlivymi itemvy v side navigaci.
 //Nakliknuty item zmeni barvu a presmeruje nas na spravy route path.
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
@@ -145,26 +145,26 @@ const Sidebar = () => {
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px" }}
             >
-              Data
+              Main
             </Typography>
             <Item
-              title="Manage Students"
-              to="/team"
+              title="Students"
+              to="/students"
               icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Random nazev - 1"
-              to="/randomnazev1"
-              icon={<ContactsOutlinedIcon />}
+              title="Chat"
+              to="/chat"
+              icon={<ChatOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Random nazev - 2"
-              to="/randomnazev2"
-              icon={<ReceiptOutlinedIcon />}
+              title="Status"
+              to="/status"
+              icon={<AutoGraphIcon />}
               selected={selected}
               setSelected={setSelected}
             />

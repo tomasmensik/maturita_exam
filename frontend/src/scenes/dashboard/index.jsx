@@ -11,6 +11,7 @@ import LineChart from "../../components/LineChart";
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
+import DateToday from "../../components/DateToday";
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -223,7 +224,7 @@ const Dashboard = () => {
           p="30px"
         >
           <Typography variant="h5" fontWeight="600">
-            Programming Languages
+            Hardware/Software
           </Typography>
           <Box
             display="flex"
@@ -237,9 +238,9 @@ const Dashboard = () => {
               color={colors.greenAccent[500]}
               sx={{ mt: "15px" }}
             >
-              4 Languages
+              Types of projects
             </Typography>
-            <Typography>Does not include frameworks</Typography>
+            <Typography>Does not include hybrid projects</Typography>
           </Box>
         </Box>
         <Box
@@ -252,7 +253,7 @@ const Dashboard = () => {
             fontWeight="600"
             sx={{ padding: "30px 30px 0 30px" }}
           >
-            Something 2
+            Programming Languages
           </Typography>
           <Box height="250px" mt="-20px">
             <BarChart isDashboard={true} />
@@ -269,9 +270,11 @@ const Dashboard = () => {
             fontWeight="600"
             sx={{ marginBottom: "15px" }}
           >
-            Something
+            Deadline
           </Typography>
-          <Box height="200px"></Box>
+          <Box height="200px">
+            <DateToday />
+          </Box>
         </Box>
       </Box>
     </Box>
