@@ -1,6 +1,12 @@
 import { Box, Typography, useTheme } from "@mui/material";
 import { tokens } from "../theme";
+import { ApolloClient, InMemoryCache } from '@apollo/client';
 import ProgressCircle from "./ProgressCircle";
+
+const client = new ApolloClient({
+  uri: '/graphql',
+  cache: new InMemoryCache()
+});
 
 const StatBox = ({ title, subtitle, icon, progress, increase }) => {
   const theme = useTheme();
