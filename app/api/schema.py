@@ -3,7 +3,8 @@ import graphene
 from graphene_django import DjangoObjectType, DjangoListField
 from ..models import PROFILE as PROFILEMODEL
 from ..models import PROJECT as PROJECTMODEL
-
+from ..models import User as USERMODEL
+from django.db.models import Sum
 class Project(DjangoObjectType):
     
     class Meta:
@@ -15,21 +16,42 @@ class Project(DjangoObjectType):
         return PROFILEMODEL.objects.filter(profile_project=self)
 
 
+class User(DjangoObjectType):
+    class Meta:
+        model = USERMODEL
+        filds = ["id","username","password","email","first_name","last_name","is_active","last_login",]
+
+    def resolve_profiles(self, info):
+        return PROFILEMODEL.objects.filter(user = self)
+
 class Profile(DjangoObjectType):
     class Meta:
         model = PROFILEMODEL
-        fields = ["id","profile_project","user","id_profile","bio","birth_date","profile_git","profile_time","profile_foto"]
+        fields = ["id","profile_project","user","id_profile","bio","birth_date","profile_git","profile_time","profile_foto", "class_profile" ]
+
+
+
+
 
 
 class Query(graphene.ObjectType):
     projects = graphene.List(Project)
     profiles = graphene.List(Profile)
+    users = graphene.List(User)
+    total_profile_time = graphene.Int()
+
+    async def resolve_total_profile_time(self, info):
+        result = await PROFILEMODEL.objects.aggregate(sum=Sum('profileTime'))
+        return result['sum']
+
     def resolve_projects(self, info):
         return PROJECTMODEL.objects.all()
 
     def resolve_profiles(self, info):
         return PROFILEMODEL.objects.all()
 
+    def resolve_users(self, info):
+        return USERMODEL.objects.all()
 schema = graphene.Schema(query=Query)
 
 

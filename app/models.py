@@ -88,9 +88,11 @@ class PROFILE(models.Model):
 
     profile_git = models.CharField(max_length=200, blank=False,
                                 help_text='Zadejte link na github', verbose_name="Github")
-    profile_time = models.TimeField(null=True, blank=True, help_text="Zadejte cas straveny na projektu", verbose_name="Cas")
+    profile_time = models.IntegerField(null=True, blank=True, help_text="Zadejte pocet hodin stravenych na projektu", verbose_name="Cas")
     profile_foto = models.ImageField(upload_to='uploads/Profile_images/%Y/%m/%d/', null=True, blank=True,
                                     verbose_name="Profilova fotografie")
+    class_profile = models.CharField(max_length=200, blank=True,
+                                help_text='Zadejte třídu, Programmer, Networker', verbose_name="trida", default="Programmer")                               
     def __str__(self):
         return f"{self.user.first_name} {self.id_profile}"
 

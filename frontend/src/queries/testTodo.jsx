@@ -2,17 +2,17 @@ import gql from 'graphql-tag';
 import { useQuery } from '@apollo/client';
 
 
-
 const GET_USERS = gql`
   query{
     profiles{
       id
-      idProfile
       profileGit
-      profileTime
-      profileProject{
-        proName
-        proDescription
+      classProfile
+      user{
+        id
+        email
+        firstName
+        lastName
       }
     }
   }
@@ -24,22 +24,19 @@ function UserList() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
- 
-    return (
-      <ul>
-        {data.profiles.map(profile => (
-          <li key={profile.id}>
-            {profile.idProfile}: {profile.profileGit} ({profile.profileTime})
-            {profile.profileProject.map(project => (
-              <div key={project.proName}>
-                <h3>{project.proName}</h3>
-                <p>{project.proDescription}</p>
-              </div>
-            ))}
-          </li>
-        ))}
-      </ul>
-    );
-    }
+  return (
+    <ul>
+      {data.profiles.map(profile => (
+        <li key={profile.id}>
+          {profile.id}: {profile.profileGit} ({profile.classProfile})
+          <div>
+            <h3>{profile.user.lastName}</h3>
+            <p>{profile.user.email}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 export default UserList;
