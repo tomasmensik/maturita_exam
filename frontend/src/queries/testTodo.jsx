@@ -7,7 +7,7 @@ const GET_USERS = gql`
     profiles{
       id
       profileGit
-      classProfile
+      proClass
       user{
         id
         email
@@ -28,7 +28,7 @@ function UserList() {
     <ul>
       {data.profiles.map(profile => (
         <li key={profile.id}>
-          {profile.id}: {profile.profileGit} ({profile.classProfile})
+          {profile.id}: {profile.profileGit} ({profile.proClass})
           <div>
             <h3>{profile.user.lastName}</h3>
             <p>{profile.user.email}</p>

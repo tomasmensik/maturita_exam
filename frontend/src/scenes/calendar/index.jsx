@@ -5,8 +5,7 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import listPlugin from "@fullcalendar/list";
 import UserList from "../../queries/testTodo";
-
-
+import TotalTimePerMonth from "../../queries/totalHours";
 
 import {
   Box,
@@ -57,8 +56,10 @@ const Calendar = () => {
         title="Calendar"
         subtitle="You can set appointments... bla bla bla"
       />
-    
-    <UserList></UserList>
+      <UserList></UserList>
+
+      
+      <TotalTimePerMonth></TotalTimePerMonth>
       <Box display="flex" justifyContent="space-between">
         {/* CALENDAR SIDEBAR */}
         <Box

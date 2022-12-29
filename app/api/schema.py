@@ -4,6 +4,7 @@ from graphene_django import DjangoObjectType, DjangoListField
 from ..models import PROFILE as PROFILEMODEL
 from ..models import PROJECT as PROJECTMODEL
 from ..models import User as USERMODEL
+from ..models import TIMESPEND as TIMESPENDMODEL
 from django.db.models import Sum
 class Project(DjangoObjectType):
     
@@ -24,10 +25,19 @@ class User(DjangoObjectType):
     def resolve_profiles(self, info):
         return PROFILEMODEL.objects.filter(user = self)
 
+
+
+class TimeSpend(DjangoObjectType):
+    class Meta:
+        model = TIMESPENDMODEL
+        fields = ["time","month"]
+    def resolve_profiles(self, info):
+        return PROFILEMODEL.objects.filter(profile_time_spend = self)
+
 class Profile(DjangoObjectType):
     class Meta:
         model = PROFILEMODEL
-        fields = ["id","profile_project","user","id_profile","bio","birth_date","profile_git","profile_time","profile_foto", "class_profile" ]
+        fields = ["id","profile_project","user","id_profile","bio","birth_date","profile_git","profile_time_spend","profile_foto", "pro_class" , "profile_foto"]
 
 
 
@@ -38,11 +48,22 @@ class Query(graphene.ObjectType):
     projects = graphene.List(Project)
     profiles = graphene.List(Profile)
     users = graphene.List(User)
-    total_profile_time = graphene.Int()
+    total_profiles = graphene.Int()
+    timesSpend = graphene.Int()
 
-    async def resolve_total_profile_time(self, info):
-        result = await PROFILEMODEL.objects.aggregate(sum=Sum('profileTime'))
-        return result['sum']
+
+    def resolve_profileTimeSpend(self, info):
+        time_spend = PROFILEMODEL.objects.values('month').annotate(time=Sum('profileTime'))
+        return [TimeSpend(time=item['time'], month=item['month']) for item in time_spend]
+
+
+    def resolve_timeSpend(self, info):
+        return TIMESPENDMODEL.objects.all()
+
+    def resolve_total_profiles(self, info):
+        return PROFILEMODEL.objects.count()
+
+
 
     def resolve_projects(self, info):
         return PROJECTMODEL.objects.all()
@@ -55,46 +76,3 @@ class Query(graphene.ObjectType):
 schema = graphene.Schema(query=Query)
 
 
-
-
-
-
-
-
-
-
-
-
-
-#class Id_Issues(DjangoObjectType):
-#    class Meta:
-#        model = ISSUES
-#        fields = "__all__"
-
-#class Id_Issues_class(DjangoObjectType):
-#    class Meta:
-#        model = ISSUES_CLASS
-#        fields = "__all__"
-
-
-
-#class Id_Assassement(DjangoObjectType):
-#    class Meta:
-#        model = ASSESSEMENT
-#        fields = "__all__"
-
-#class Id_User(DjangoObjectType):
-#    class Meta:
-#        model = User
-#        fields = "__all__"
-
-
-
-#        try:
-#            return Profile.objects.get(id_profile=id_profile)
-#        except Profile.DoesNotExist:
-#            return None
-
-
-
-schema = graphene.Schema(query=Query)    

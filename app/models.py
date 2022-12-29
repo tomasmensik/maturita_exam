@@ -3,8 +3,10 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.db.models import Sum
 
-
+def profile_images(instance, filename):
+    return "image_profile/" + str(instance.id) + "/image/" + filename
 
 class ISSUES(models.Model):
 
@@ -50,6 +52,15 @@ class PROJECT(models.Model):
     pro_description = models.TextField(blank=False,
                                 help_text='Zadejte strucny popis projektu', verbose_name="popis")
 
+    TYPES = (
+        ('hardware', 'hardware'),
+        ('software', 'software'),
+    )
+
+    # Pole s definovanými předvolbami pro uložení typu přílohy
+    types = models.CharField(max_length=30, choices=TYPES, blank=True, default='software',
+                                help_text='Zvolte, zda projekt bude softwarový, nebo hardwarový', verbose_name="Typ")
+
     def __str__(self):
         return f"{self.pro_name}"
 
@@ -64,7 +75,6 @@ class ASSESSEMENT(models.Model):
         ('3', '3'),
         ('4', '4'),
         ('5', '5'),
-
     )
 
     as_mark = models.CharField(max_length=1, choices=MARKS, blank=True,
@@ -75,25 +85,52 @@ class ASSESSEMENT(models.Model):
         return f"{self.project_id} známka: {self.as_mark}"
 
 
+class TIMESPEND(models.Model):
+    time = models.IntegerField(null=True, blank=True, help_text="Zadejte pocet hodin stravenych na projektu", verbose_name="Cas")
+    MONTH = (
+        ('January', 'January'),
+        ('February', 'February'),
+        ('March', 'March'),
+        ('April', 'April'),
+        ('May', 'May'),
+        ('June', 'June'),
+        ('July', 'July'),
+        ('August', 'August'),
+        ('September', 'September'),
+        ('October', 'October'),
+        ('November', 'November'),
+        ('December', 'December'),
+    )
 
-
+    # Pole s definovanými předvolbami pro uložení typu přílohy
+    month = models.CharField(max_length=30, choices=MONTH, blank=False,
+                                help_text='Zvolte zda je uživatel programátor, nebo síťař', verbose_name="měsíc")  
+    def __str__(self):
+        return f"{self.id}" + ". " + f"{self.month}" + " pocet hodin:" + f"{self.time}"
 
 class PROFILE(models.Model):
     profile_project = models.ManyToManyField(PROJECT, help_text="Na jakem projektu bude pracovat", verbose_name="projekt",null=True, blank=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, default=1)
-    id_profile = models.CharField(max_length=10, blank=False,
-                                help_text='Zadejte id studenta', verbose_name="priklad:it1987", default="itstudent")
+
+    id_profile = models.CharField(max_length=10, blank=True,
+                                help_text='Zadejte id studenta', verbose_name="priklad:it1987", unique=True)
+
     bio = models.TextField(max_length=500, blank=True)
     birth_date = models.DateField(null=True, blank=True)
 
     profile_git = models.CharField(max_length=200, blank=False,
                                 help_text='Zadejte link na github', verbose_name="Github")
-    profile_time = models.IntegerField(null=True, blank=True, help_text="Zadejte pocet hodin stravenych na projektu", verbose_name="Cas")
-    profile_foto = models.ImageField(upload_to='uploads/Profile_images/%Y/%m/%d/', null=True, blank=True,
-                                    verbose_name="Profilova fotografie")
-    class_profile = models.CharField(max_length=200, blank=True,
-                                help_text='Zadejte třídu, Programmer, Networker', verbose_name="trida", default="Programmer")                               
+    profile_time_spend = models.ManyToManyField(TIMESPEND, help_text="Kolik hodin a za jaký měsíc chcete přidat?", verbose_name="čas",null=True, blank=True)
+    profile_foto = models.ImageField(upload_to=profile_images, blank=True, null=True)
+    CLASS = (
+        ('Programmer', 'Programmer'),
+        ('Networker', 'Networker'),
+    )
+
+    # Pole s definovanými předvolbami pro uložení typu přílohy
+    pro_class = models.CharField(max_length=30, choices=CLASS, blank=True, default='Programmer',
+                                help_text='Zvolte zda je uživatel programátor, nebo síťař', verbose_name="Třída")                                                           
     def __str__(self):
-        return f"{self.user.first_name} {self.id_profile}"
+        return f"{self.user.first_name} {self.id_profile} {self.pro_class}"
 
 
