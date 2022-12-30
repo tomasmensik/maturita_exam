@@ -142,13 +142,6 @@ const Sidebar = () => {
                       : "Student Profile"
                     //Tady se musí nastavit "Admin Profile" pro admina a "Programmer/Networker" pro studenta
                   }
-                  <Item
-                    title="TEMPORARY ITEM (login)"
-                    to="/app/login"
-                    icon={<AccessibleIcon />}
-                    selected={selected}
-                    setSelected={setSelected}
-                  />
                 </Typography>
               </Box>
             </Box>

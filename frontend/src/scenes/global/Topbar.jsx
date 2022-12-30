@@ -14,6 +14,7 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchIcon from "@mui/icons-material/Search";
+import { Link } from "react-router-dom";
 
 //Tato arrow Topbar() function nam vygeneruje celou horni listu. Kazda jednotliva sekce ma jine CSS styly.
 //Na teto horni liste mame napriklad search bar nebo ikonky, co meni theme (light mode a dark mode).
@@ -52,9 +53,11 @@ const Topbar = () => {
         <IconButton>
           <SettingsOutlinedIcon />
         </IconButton>
-        <IconButton>
-          <PersonOutlinedIcon />
-        </IconButton>
+        <Link to="/app/login">
+          <IconButton>
+            <PersonOutlinedIcon />
+          </IconButton>
+        </Link>
       </Box>
     </Box>
   );
