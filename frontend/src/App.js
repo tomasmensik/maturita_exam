@@ -27,17 +27,17 @@ function App() {
           <main className="content">
             <Topbar />
             <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/students" element={<Students />} />
-              <Route path="/calendar" element={<Calendar />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/bar" element={<Bar />} />
-              <Route path="/pie" element={<Pie />} />
-              <Route path="/line" element={<Line />} />
-              <Route path="/status" element={<Status />} />
-              <Route path="/chat" element={<Chat />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/login" element={<SignInOut />} />
+              <Route path="/app/dashboard" element={<Dashboard />} />
+              <Route path="/app/students" element={<Students />} />
+              <Route path="/app/calendar" element={<Calendar />} />
+              <Route path="/app/faq" element={<FAQ />} />
+              <Route path="/app/bar" element={<Bar />} />
+              <Route path="/app/pie" element={<Pie />} />
+              <Route path="/app/line" element={<Line />} />
+              <Route path="/app/status" element={<Status />} />
+              <Route path="/app/chat" element={<Chat />} />
+              <Route path="/app/profile" element={<Profile />} />
+              <Route path="/app/login" element={<SignInOut />} />
             </Routes>
           </main>
         </div>
