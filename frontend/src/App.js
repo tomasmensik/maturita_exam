@@ -13,6 +13,7 @@ import Bar from "./scenes/bar";
 import Profile from "./scenes/profile";
 import Line from "./scenes/line";
 import Pie from "./scenes/pie";
+import SignInOut from "./scenes/login";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -36,6 +37,7 @@ function App() {
               <Route path="/status" element={<Status />} />
               <Route path="/chat" element={<Chat />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/login" element={<SignInOut />} />
             </Routes>
           </main>
         </div>
