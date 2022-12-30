@@ -14,6 +14,11 @@ import Profile from "./scenes/profile";
 import Line from "./scenes/line";
 import Pie from "./scenes/pie";
 import SignInOut from "./scenes/login";
+import Todolist from "./scenes/to-do list";
+import Readme from "./scenes/readme";
+import Project from "./scenes/project";
+import Issues from "./scenes/issues";
+import Friends from "./scenes/friends";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -38,6 +43,12 @@ function App() {
               <Route path="/app/chat" element={<Chat />} />
               <Route path="/app/profile" element={<Profile />} />
               <Route path="/app/login" element={<SignInOut />} />
+
+              <Route path="/app/todolist" element={<Todolist />} />
+              <Route path="/app/readme" element={<Readme />} />
+              <Route path="/app/project" element={<Project />} />
+              <Route path="/app/issues" element={<Issues />} />
+              <Route path="/app/Friends" element={<Friends />} />
             </Routes>
           </main>
         </div>

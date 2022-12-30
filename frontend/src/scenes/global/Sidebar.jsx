@@ -14,7 +14,7 @@ import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
 import { tokens } from "../../theme";
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import CheckBoxOutlinedIcon from "@mui/icons-material/CheckBoxOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ChatOutlinedIcon from "@mui/icons-material/ChatOutlined";
 import AutoGraphIcon from "@mui/icons-material/AutoGraph";
@@ -26,6 +26,10 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import AccessibleIcon from "@mui/icons-material/Accessible";
+import DesktopWindowsOutlinedIcon from "@mui/icons-material/DesktopWindowsOutlined";
+import BorderColorOutlinedIcon from "@mui/icons-material/BorderColorOutlined";
+import StickyNote2OutlinedIcon from "@mui/icons-material/StickyNote2Outlined";
+import DashboardIcon from "@mui/icons-material/Dashboard";
 
 //Tato arrowe Item() function nam umozni preklikavat mezi jednotlivymi itemvy v side navigaci.
 //Nakliknuty item zmeni barvu a presmeruje nas na spravy route path.
@@ -56,6 +60,7 @@ const Sidebar = () => {
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
+  let adminAtTheMoment = false;
 
   return (
     <Box
@@ -96,7 +101,7 @@ const Sidebar = () => {
                 ml="15px"
               >
                 <Typography variant="h3" color={colors.grey[100]}>
-                  ADMIN
+                  {adminAtTheMoment === true ? "ADMIN" : "STUDENT"}
                 </Typography>
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
@@ -112,7 +117,12 @@ const Sidebar = () => {
                   alt="profile-user"
                   width="100px"
                   height="100px"
-                  src={`../../assets/user.png`}
+                  src={
+                    adminAtTheMoment === true
+                      ? `../../assets/admin.png`
+                      : `../../assets/user.png`
+                  }
+                  //Tady se musí dodělat src (fotky se musí vložit do build/assets/)
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
@@ -123,16 +133,15 @@ const Sidebar = () => {
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                  Marek Zuck
+                  {adminAtTheMoment === true ? "Marek Lučný" : "Tomáš Menšík"}
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                  <Item
-                    title="TEMPORARY (logic click)"
-                    to="/app/login"
-                    icon={<AccessibleIcon />}
-                    selected={selected}
-                    setSelected={setSelected}
-                  />
+                  {
+                    adminAtTheMoment === true
+                      ? "Admin Profile"
+                      : "Student Profile"
+                    //Tady se musí nastavit "Admin Profile" pro admina a "Programmer/Networker" pro studenta
+                  }
                 </Typography>
               </Box>
             </Box>
@@ -140,9 +149,15 @@ const Sidebar = () => {
 
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
             <Item
-              title="Dashboard"
-              to="/app/dashboard"
-              icon={<HomeOutlinedIcon />}
+              title={adminAtTheMoment === true ? "Dashboard" : "Project"}
+              to="/app/project"
+              icon={
+                adminAtTheMoment === true ? (
+                  <DashboardIcon />
+                ) : (
+                  <DesktopWindowsOutlinedIcon />
+                )
+              }
               selected={selected}
               setSelected={setSelected}
             />
@@ -155,8 +170,8 @@ const Sidebar = () => {
               Main
             </Typography>
             <Item
-              title="Students"
-              to="/app/students"
+              title={adminAtTheMoment === true ? "Students" : "Friends"}
+              to={adminAtTheMoment === true ? "app/students" : "app/friends"}
               icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -210,26 +225,44 @@ const Sidebar = () => {
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px" }}
             >
-              Charts
+              {adminAtTheMoment === true ? "Charts" : "Tools"}
             </Typography>
             <Item
-              title="Bar Chart"
-              to="/app/bar"
-              icon={<BarChartOutlinedIcon />}
+              title={adminAtTheMoment === true ? "Bar Chart" : "To-Do List"}
+              to={adminAtTheMoment === true ? "app/bar" : "app/todolist"}
+              icon={
+                adminAtTheMoment === true ? (
+                  <BarChartOutlinedIcon />
+                ) : (
+                  <CheckBoxOutlinedIcon />
+                )
+              }
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Pie Chart"
-              to="/app/pie"
-              icon={<PieChartOutlineOutlinedIcon />}
+              title={adminAtTheMoment === true ? "Pie Chart" : "Issues"}
+              to={adminAtTheMoment === true ? "app/pie" : "app/issues"}
+              icon={
+                adminAtTheMoment === true ? (
+                  <PieChartOutlineOutlinedIcon />
+                ) : (
+                  <BorderColorOutlinedIcon />
+                )
+              }
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Line Chart"
-              to="/app/line"
-              icon={<TimelineOutlinedIcon />}
+              title={adminAtTheMoment === true ? "Line Chart" : "README.md"}
+              to={adminAtTheMoment === true ? "app/line" : "app/readme"}
+              icon={
+                adminAtTheMoment === true ? (
+                  <TimelineOutlinedIcon />
+                ) : (
+                  <StickyNote2OutlinedIcon />
+                )
+              }
               selected={selected}
               setSelected={setSelected}
             />
