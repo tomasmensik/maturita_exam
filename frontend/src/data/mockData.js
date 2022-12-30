@@ -354,34 +354,16 @@ export const mockBarData = [
 
 export const mockPieData = [
   {
-    id: "hack",
-    label: "hack",
-    value: 239,
+    id: "Software",
+    label: "Software",
+    value: 21,
     color: "hsl(104, 70%, 50%)",
   },
   {
-    id: "make",
-    label: "make",
-    value: 170,
+    id: "Hardware",
+    label: "Hardware",
+    value: 11,
     color: "hsl(162, 70%, 50%)",
-  },
-  {
-    id: "go",
-    label: "go",
-    value: 322,
-    color: "hsl(291, 70%, 50%)",
-  },
-  {
-    id: "lisp",
-    label: "lisp",
-    value: 503,
-    color: "hsl(229, 70%, 50%)",
-  },
-  {
-    id: "scala",
-    label: "scala",
-    value: 584,
-    color: "hsl(344, 70%, 50%)",
   },
 ];
 
@@ -391,51 +373,51 @@ export const mockLineData = [
     color: tokens("dark").greenAccent[500],
     data: [
       {
-        x: "january",
+        x: "Jan.",
         y: 0,
       },
       {
-        x: "february",
+        x: "Feb.",
         y: 55,
       },
       {
-        x: "march",
+        x: "Mar.",
         y: 60,
       },
       {
-        x: "april",
+        x: "Apr.",
         y: 156,
       },
       {
-        x: "may",
+        x: "May",
         y: 105,
       },
       {
-        x: "june",
+        x: "June",
         y: 26,
       },
       {
-        x: "july",
+        x: "July",
         y: 88,
       },
       {
-        x: "august",
+        x: "Aug.",
         y: 200,
       },
       {
-        x: "september",
+        x: "Sept.",
         y: 51,
       },
       {
-        x: "october",
+        x: "Oct.",
         y: 91,
       },
       {
-        x: "november",
+        x: "Nov.",
         y: 45,
       },
       {
-        x: "december",
+        x: "Dec.",
         y: 84,
       },
     ],
@@ -445,51 +427,51 @@ export const mockLineData = [
     color: tokens("dark").blueAccent[300],
     data: [
       {
-        x: "january",
+        x: "Jan.",
         y: 0,
       },
       {
-        x: "february",
+        x: "Feb.",
         y: 205,
       },
       {
-        x: "march",
+        x: "Mar.",
         y: 200,
       },
       {
-        x: "april",
+        x: "Apr.",
         y: 216,
       },
       {
-        x: "may",
+        x: "May",
         y: 235,
       },
       {
-        x: "june",
+        x: "June",
         y: 180,
       },
       {
-        x: "july",
+        x: "July",
         y: 98,
       },
       {
-        x: "august",
+        x: "Aug.",
         y: 102,
       },
       {
-        x: "september",
+        x: "Sept.",
         y: 51,
       },
       {
-        x: "october",
+        x: "Oct.",
         y: 59,
       },
       {
-        x: "november",
+        x: "Nov.",
         y: 105,
       },
       {
-        x: "december",
+        x: "Dec.",
         y: 94,
       },
     ],
@@ -499,51 +481,51 @@ export const mockLineData = [
     color: tokens("dark").redAccent[200],
     data: [
       {
-        x: "january",
+        x: "Jan.",
         y: 0,
       },
       {
-        x: "february",
+        x: "Feb.",
         y: 75,
       },
       {
-        x: "march",
+        x: "Mar.",
         y: 225,
       },
       {
-        x: "april",
+        x: "Apr.",
         y: 216,
       },
       {
-        x: "may",
+        x: "May",
         y: 105,
       },
       {
-        x: "june",
+        x: "June",
         y: 236,
       },
       {
-        x: "july",
+        x: "July",
         y: 88,
       },
       {
-        x: "august",
+        x: "Aug.",
         y: 232,
       },
       {
-        x: "september",
+        x: "Sept.",
         y: 211,
       },
       {
-        x: "october",
+        x: "Oct.",
         y: 101,
       },
       {
-        x: "november",
+        x: "Nov.",
         y: 35,
       },
       {
-        x: "december",
+        x: "Dec.",
         y: 14,
       },
     ],

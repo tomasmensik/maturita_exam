@@ -49,10 +49,14 @@ const Chat = () => {
         </Box>
       </Box>
       <Box
-        style={{ marginTop: "20px", marginLeft: "50px", marginRight: "50px" }}
+        style={{
+          marginTop: "20px",
+          marginLeft: "50px",
+          marginRight: "50px",
+        }}
       >
         <Grid
-          style={{ backgroundColor: colors.primary[400] }}
+          style={{ backgroundColor: colors.primary[400], borderRadius: "10px" }}
           container
           className={classes.chatSection}
         >
