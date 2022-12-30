@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
-import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import Divider from "@mui/material/Divider";
@@ -39,7 +38,7 @@ const Chat = () => {
   const classes = useStyles();
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  let adminAtTheMoment = false;
+  let adminAtTheMoment = true;
 
   return (
     <Box>
