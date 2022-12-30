@@ -149,9 +149,7 @@ const Dashboard = () => {
                 variant="h3"
                 fontWeight="bold"
                 color={colors.greenAccent[500]}
-              >
-                
-              </Typography>
+              ></Typography>
             </Box>
             <Box>
               <IconButton>

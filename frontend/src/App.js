@@ -33,22 +33,31 @@ function App() {
             <Topbar />
             <Routes>
               <Route path="/app/dashboard" element={<Dashboard />} />
+              <Route path="/app/project" element={<Project />} />
+
               <Route path="/app/students" element={<Students />} />
-              <Route path="/app/calendar" element={<Calendar />} />
-              <Route path="/app/faq" element={<FAQ />} />
-              <Route path="/app/bar" element={<Bar />} />
-              <Route path="/app/pie" element={<Pie />} />
-              <Route path="/app/line" element={<Line />} />
-              <Route path="/app/status" element={<Status />} />
+              <Route path="/app/friends" element={<Friends />} />
+
               <Route path="/app/chat" element={<Chat />} />
+
+              <Route path="/app/status" element={<Status />} />
+
               <Route path="/app/profile" element={<Profile />} />
-              <Route path="/app/login" element={<SignInOut />} />
+
+              <Route path="/app/calendar" element={<Calendar />} />
+
+              <Route path="/app/faq" element={<FAQ />} />
 
               <Route path="/app/todolist" element={<Todolist />} />
-              <Route path="/app/readme" element={<Readme />} />
-              <Route path="/app/project" element={<Project />} />
+              <Route path="/app/bar" element={<Bar />} />
+
               <Route path="/app/issues" element={<Issues />} />
-              <Route path="/app/Friends" element={<Friends />} />
+              <Route path="/app/pie" element={<Pie />} />
+
+              <Route path="/app/readme" element={<Readme />} />
+              <Route path="/app/line" element={<Line />} />
+
+              <Route path="/app/login" element={<SignInOut />} />
             </Routes>
           </main>
         </div>
