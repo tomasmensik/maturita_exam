@@ -25,6 +25,7 @@ import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import AccessibleIcon from "@mui/icons-material/Accessible";
 
 //Tato arrowe Item() function nam umozni preklikavat mezi jednotlivymi itemvy v side navigaci.
 //Nakliknuty item zmeni barvu a presmeruje nas na spravy route path.
@@ -125,7 +126,13 @@ const Sidebar = () => {
                   Marek Zuck
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                  Robot
+                  <Item
+                    title="TEMPORARY (logic click)"
+                    to="/app/login"
+                    icon={<AccessibleIcon />}
+                    selected={selected}
+                    setSelected={setSelected}
+                  />
                 </Typography>
               </Box>
             </Box>
@@ -134,7 +141,7 @@ const Sidebar = () => {
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
             <Item
               title="Dashboard"
-              to="/"
+              to="/app/dashboard"
               icon={<HomeOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -149,21 +156,21 @@ const Sidebar = () => {
             </Typography>
             <Item
               title="Students"
-              to="/students"
+              to="/app/students"
               icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Chat"
-              to="/chat"
+              to="/app/chat"
               icon={<ChatOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Status"
-              to="/status"
+              to="/app/status"
               icon={<AutoGraphIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -178,21 +185,21 @@ const Sidebar = () => {
             </Typography>
             <Item
               title="Profile"
-              to="/profile"
+              to="/app/profile"
               icon={<PersonOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Calendar"
-              to="/calendar"
+              to="/app/calendar"
               icon={<CalendarTodayOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="FAQ Page"
-              to="/faq"
+              to="/app/faq"
               icon={<HelpOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -207,21 +214,21 @@ const Sidebar = () => {
             </Typography>
             <Item
               title="Bar Chart"
-              to="/bar"
+              to="/app/bar"
               icon={<BarChartOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Pie Chart"
-              to="/pie"
+              to="/app/pie"
               icon={<PieChartOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Line Chart"
-              to="/line"
+              to="/app/line"
               icon={<TimelineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
