@@ -5,7 +5,10 @@ import PieChart from "../../components/PieChart";
 const Pie = () => {
   return (
     <Box m="20px">
-      <Header title="Pie Chart" subtitle="Simple Pie Chart" />
+      <Header
+        title="Hardware/Software"
+        subtitle="Here you can see your Pie Chart... bla bla bla"
+      />
       <Box height="75vh">
         <PieChart />
       </Box>

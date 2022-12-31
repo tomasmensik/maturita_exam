@@ -60,7 +60,7 @@ const Sidebar = () => {
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
-  let adminAtTheMoment = false;
+  let adminAtTheMoment = true;
 
   return (
     <Box
@@ -119,8 +119,8 @@ const Sidebar = () => {
                   height="100px"
                   src={
                     adminAtTheMoment === true
-                      ? `../../assets/admin.png`
-                      : `../../assets/user.png`
+                      ? `../../../assets/admin.png`
+                      : `../../../assets/student.png`
                   }
                   //Tady se musí dodělat src (fotky se musí vložit do build/assets/)
                   style={{ cursor: "pointer", borderRadius: "50%" }}
@@ -150,7 +150,7 @@ const Sidebar = () => {
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
             <Item
               title={adminAtTheMoment === true ? "Dashboard" : "Project"}
-              to="/app/project"
+              to={adminAtTheMoment === true ? "app/dashboard" : "app/project"}
               icon={
                 adminAtTheMoment === true ? (
                   <DashboardIcon />

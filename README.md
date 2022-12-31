@@ -157,12 +157,14 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 | 23.12.2022 | 2 hodiny | Scenes - FAQ                                                       |
 | 24.12.2022 | 4 hodiny | Scenes - Pie Chart, Bar Chart, Line Chart                          |
 | 25.12.2022 | 3 hodiny | Scenes - Dashboard                                                 |
-| 25.12.2022 | 2 hodiny | Fix - Pomáhaní propojení backendu s frontendem                     |
+| 25.12.2022 | 2 hodiny | Fix - pomáhaní propojení backendu s frontendem                     |
 | 28.12.2022 | 2 hodiny | Fix - scenes (nedodělané věci)                                     |
-| 28.12.2022 | 6 hodin  | Fix - Pomáhaní s queries a vysvětlování struktury frontendu        |
+| 28.12.2022 | 6 hodin  | Fix - pomáhaní s queries a vysvětlování struktury frontendu        |
 | 29.12.2022 | 1 hodina | Scenes - Login/Register                                            |
 | 29.12.2022 | 1 hodina | Fix - doladění forms u Login/Register podle databáze               |
-| 29.12.2022 | 5 hodina | Fix - Pomáhaní s API vypisováním z databáze                        |
+| 29.12.2022 | 5 hodina | Fix - pomáhaní s API vypisováním z databáze                        |
+| 30.12.2022 | 2 hodiny | Sidebar - přepnutí mezi Admin/Student + Login button přesunut      |
+| 30.12.2022 | 2 hodiny | Fix - API request z databáze do Students a tvorba frontendu k tomu |
 
 #### Instalace a spuštění
 
