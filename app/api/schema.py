@@ -5,7 +5,18 @@ from ..models import PROFILE as PROFILEMODEL
 from ..models import PROJECT as PROJECTMODEL
 from ..models import User as USERMODEL
 from ..models import TIMESPEND as TIMESPENDMODEL
+from ..models import ISSUES as ISSUEMODEL
+form ..models import ISSUECLASS as ISSUECLASS
+
 from django.db.models import Sum
+
+
+class Issues(DjangoObjectType):
+    class Meta:
+        model = ISSUEMODEL  
+        fields = ["isdone", "issue_detail"]
+
+
 class Project(DjangoObjectType):
     
     class Meta:

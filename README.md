@@ -68,12 +68,12 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 #### Celkově strávený čas na projektu: Jan Slivka
 
 | Den        | Čas      | Info                                                               |
-| ---------- | -------- | ------------------------------------------------------------------ | --- | --- |
+| ---------- | -------- | ------------------------------------------------------------------ |
 | 30.9.2022  | 1 hodina | Seznámování s projektem a problémy v něm                           |
 | 3.10 2022  | 2 hodiny | Vymýšlení projektu a hledání informací                             |
 | 4.10.2022  | 4 hodiny | Napsání Github repozitáře, rozvržení projektu, hledání technologií |
 | 15.10.2022 | 4 hodiny | Vytváření ERA diagrami                                             |
-| 16.10.2022 | 1 hodina | -                                                                  |     | -   |
+| 16.10.2022 | 1 hodina | -                                                                  |
 | 18.10.2022 | 2 hodiny | Vytváření kostry djanga a studování                                |
 | 29.10.2022 | 3 hodiny | Úprava ER diagramu a studování djanga                              |
 | 12.11.2022 | 2 hodiny | Úprava ER diagramu a studování djanga                              |
@@ -86,6 +86,10 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 | 26.12.2022 | 10 hodin | Finální propojování frontendu s backendem a Dockerizace            |
 | 26.12.2022 | 5 hodiny | Setup základy api s Graphql                                        |
 | 27.12.2022 | 10 hodin | Setup základy api s Graphql                                        |
+| 28.12.2022 | 12 hodin | Setup základy api s Graphql                                        |
+| 29.12.2022 | 12 hodin | Setup základy api s Graphql                                        |
+| 30.12.2022 | 12 hodin | Setup základy api s Graphql                                        |
+| 31.12.2022 | 6 hodin | Setup základy api s Graphql                                         |
 
 ## Frontend - Tomáš Menšík
 
@@ -173,7 +177,7 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 - git clone https://github.com/HansS04/maturitaExam.git
 - cd maturitaExam
 - cd frontend
-- npm install
+- npm install --legacy-peer-deps
 - cd ..
 - docker compose up
 
