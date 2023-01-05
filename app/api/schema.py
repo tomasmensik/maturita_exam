@@ -6,10 +6,10 @@ from ..models import PROJECT as PROJECTMODEL
 from ..models import User as USERMODEL
 from ..models import TIMESPEND as TIMESPENDMODEL
 from ..models import ISSUES as ISSUEMODEL
-form ..models import ISSUECLASS as ISSUECLASS
 
 from django.db.models import Sum
-
+import graphql_jwt
+from graphql_jwt.decorators import login_required
 
 class Issues(DjangoObjectType):
     class Meta:
@@ -52,7 +52,13 @@ class Profile(DjangoObjectType):
 
 
 
-
+class Mutation(graphene.ObjectType):
+    token_auth = graphql_jwt.ObtainJSONWebToken.Field()
+    verify_token = graphql_jwt.Verify.Field()
+    refresh_token = graphql_jwt.Refresh.Field()
+    delete_token_cookie = graphql_jwt.DeleteJSONWebTokenCookie.Field()
+    # Long running refresh tokens
+    delete_refresh_token_cookie = graphql_jwt.DeleteRefreshTokenCookie.Field()
 
 
 class Query(graphene.ObjectType):
@@ -61,7 +67,14 @@ class Query(graphene.ObjectType):
     users = graphene.List(User)
     total_profiles = graphene.Int()
     timesSpend = graphene.Int()
+    get_user = graphene.Field(User, token=graphene.String(required=True))
 
+    @login_required
+    def resolve_get_user(self, info, **kwargs):
+        user = info.context.user
+        if not user.is_authenticated:
+             raise Exception("Authentication credentials were not provided")
+        return info.context.user
 
     def resolve_profileTimeSpend(self, info):
         time_spend = PROFILEMODEL.objects.values('month').annotate(time=Sum('profileTime'))
@@ -84,6 +97,6 @@ class Query(graphene.ObjectType):
 
     def resolve_users(self, info):
         return USERMODEL.objects.all()
-schema = graphene.Schema(query=Query)
+schema = graphene.Schema(query=Query, mutation=Mutation)
 
 
