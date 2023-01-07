@@ -26,20 +26,22 @@ import TableBody from "@mui/material/TableBody";
 //Pomoci rendercell() funkce vyrenderujeme jednotlive studenty a nastavime barvu podle toho, jestli jsou programatori nebo sitari.
 
 const GET_USERS = gql`
-  query {
-    profiles {
+
+query {
+  students(isAdmin : false) {
+    id
+    profileGit
+    proClass
+    idProfile
+    isAdmin
+    user {
       id
-      profileGit
-      proClass
-      idProfile
-      user {
-        id
-        email
-        firstName
-        lastName
-      }
+      email
+      firstName
+      lastName
     }
   }
+}
 `;
 
 const Students = () => {
@@ -73,7 +75,7 @@ const Students = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {data.profiles.map((profile) => (
+            {data.students.map((profile) => (
               <TableRow key={profile.id}>
                 <TableCell>{profile.id}</TableCell>
                 <TableCell style={{ color: colors.greenAccent[300] }}>

@@ -5,8 +5,13 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.db.models import Sum
 
+
 def profile_images(instance, filename):
     return "image_profile/" + str(instance.id) + "/image/" + filename
+
+
+
+
 
 class ISSUES(models.Model):
 
@@ -41,9 +46,14 @@ class ISSUES_CLASS(models.Model):
     class_image = models.ImageField(upload_to='uploads/Issue_class/%Y/%m/%d/', null=True, blank=True, verbose_name="Ilustracni foto")
     def __str__(self):
         return f"{self.issues_class_name}"
+class LANGUAGES(models.Model):
+      language = models.CharField(max_length=30, blank=True, default='jine',
+                                help_text='Zadejte programovací jazyky', verbose_name="jazyk")      
+      def __str__(self):
+        return f"{self.language}"
 class PROJECT(models.Model):
-
-
+    
+    pro_language = models.ManyToManyField(LANGUAGES)
     project_issue_call = models.ManyToManyField(ISSUES_CLASS, help_text="Vytvoreni tridy pro issues", verbose_name="trida pro issue",  null=True, blank=True)
 
     pro_name = models.CharField(max_length=45, blank=False,
@@ -60,6 +70,9 @@ class PROJECT(models.Model):
     # Pole s definovanými předvolbami pro uložení typu přílohy
     types = models.CharField(max_length=30, choices=TYPES, blank=True, default='software',
                                 help_text='Zvolte, zda projekt bude softwarový, nebo hardwarový', verbose_name="Typ")
+
+    # Pole s definovanými předvolbami pro uložení typu přílohy
+                        
 
     def __str__(self):
         return f"{self.pro_name}"
@@ -102,11 +115,13 @@ class TIMESPEND(models.Model):
         ('December', 'December'),
     )
 
-    # Pole s definovanými předvolbami pro uložení typu přílohy
     month = models.CharField(max_length=30, choices=MONTH, blank=False,
                                 help_text='Zvolte zda je uživatel programátor, nebo síťař', verbose_name="měsíc")  
     def __str__(self):
         return f"{self.id}" + ". " + f"{self.month}" + " pocet hodin:" + f"{self.time}"
+
+
+
 
 class PROFILE(models.Model):
     profile_project = models.ManyToManyField(PROJECT, help_text="Na jakem projektu bude pracovat", verbose_name="projekt",null=True, blank=True)
@@ -126,11 +141,19 @@ class PROFILE(models.Model):
         ('Programmer', 'Programmer'),
         ('Networker', 'Networker'),
     )
-
+    is_admin = models.BooleanField(default=False, help_text="Jste učitel, nebo student? ANO, NE", verbose_name="Učitel")
     # Pole s definovanými předvolbami pro uložení typu přílohy
     pro_class = models.CharField(max_length=30, choices=CLASS, blank=True, default='Programmer',
                                 help_text='Zvolte zda je uživatel programátor, nebo síťař', verbose_name="Třída")                                                           
     def __str__(self):
         return f"{self.user.first_name} {self.id_profile} {self.pro_class}"
 
+class COMMENT(models.Model):
 
+    profile_comment = models.ManyToManyField(PROFILE, help_text="Kdo komentář napsal", verbose_name="uživatel",null=True, blank=True)
+   
+    content = models.TextField(max_length=500, blank=True)
+    time_comment = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.time_comment}"

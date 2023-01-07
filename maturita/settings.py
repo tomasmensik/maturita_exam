@@ -27,6 +27,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'app',
     'graphene_django',
     'graphql_jwt.refresh_token.apps.RefreshTokenConfig',
+
 ]
 
 MIDDLEWARE = [
