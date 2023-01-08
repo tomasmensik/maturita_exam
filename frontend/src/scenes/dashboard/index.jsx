@@ -16,6 +16,8 @@ import PieChart from "../../components/PieChart";
 import DateToday from "../../components/DateToday";
 import DateDeadline from "../../components/DateDeadline";
 import Person2Icon from "@mui/icons-material/Person2";
+import Hours from "../../queries/allProfilesHours";
+
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -60,7 +62,7 @@ const Dashboard = () => {
           justifyContent="center"
         >
           <StatBox
-            title="952"
+            title={<Hours></Hours>}
             subtitle="Hours spent"
             progress="1"
             increase="+14%"
