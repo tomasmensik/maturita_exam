@@ -90,8 +90,10 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 | 29.12.2022 | 12 hodin | Setup základy api s Graphql                                        |
 | 30.12.2022 | 12 hodin | Setup základy api s Graphql                                        |
 | 31.12.2022 | 6 hodin | Setup základy api s Graphql                                         |
-| 5.12.2022 | 5 hodin | Login                                         |
-| 6.12.2022 | 6 hodin | Setup základy api s Graphql                                         |
+| 5.1.2023 | 5 hodin | Login                                         |
+| 6.1.2023 | 6 hodin | Setup základy api s Graphql                                         |
+| 8.1.2023 | 6 hodin | Pomáhat vypsat data a progress s graphql jwt                                        |
+
 
 ## Frontend - Tomáš Menšík
 
