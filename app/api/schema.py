@@ -83,12 +83,19 @@ class Query(graphene.ObjectType):
     total_profiles = graphene.Int()
     timesSpend = graphene.Int()
     get_user = graphene.Field(User, token=graphene.String(required=True))
+    user_details = graphene.Field(User)
     profile_count = graphene.Int(isAdmin=graphene.Boolean())
     software_project_count = graphene.Int()
     hardware_project_count = graphene.Int()
     comments = graphene.List(Comment)
     languages = graphene.List(Language)
 
+
+    def resolve_user_details(root, info, **kwargs):
+        user = info.context.user
+        if not user.is_authenticated:
+            raise Exception("Authentication credentials were not provided")
+        return USERMODEL.objects.get(username=user)
 
     def resolve_languages(self,info):
         return LANGUAGEMODEL.objects.all()

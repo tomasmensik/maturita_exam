@@ -6,7 +6,6 @@ const GET_USERS = gql`
   query{
   softwareProjectCount
 }
-
 `;
 
 function TotalSoftware() {

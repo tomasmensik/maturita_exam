@@ -9,7 +9,7 @@ import TotalTimePerMonth from "../../queries/totalHours";
 import Hours from "../../queries/allProfilesHours"
 import AllProfiles from "../../queries/totalProfiles";
 import TotalSoftware from "../../queries/totalSoftware";
-import TotalHardware from "../../queries/totalHardware";
+
 
 import {
   Box,
@@ -64,8 +64,8 @@ const Calendar = () => {
       <Hours></Hours>
       <AllProfiles></AllProfiles>
       <TotalTimePerMonth></TotalTimePerMonth>
-      <TotalHardware></TotalHardware>
       <TotalSoftware></TotalSoftware>
+
       <Box display="flex" justifyContent="space-between">
         {/* CALENDAR SIDEBAR */}
         <Box
