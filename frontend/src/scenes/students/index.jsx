@@ -20,28 +20,28 @@ import TableFooter from "@mui/material/TableFooter";
 import TableRow from "@mui/material/TableRow";
 import TableCell from "@mui/material/TableCell";
 import TableBody from "@mui/material/TableBody";
+import { Link } from "@mui/material";
 
 //Tato arrow Students() function nam umozni vygenerovat "Students" studentu. Diky teto tabulce muze admin managovat se studenty.
 //Nejprve si vytvorime nase sloupce (neboli hlavicku) a napise jednotlive nazvy.
 //Pomoci rendercell() funkce vyrenderujeme jednotlive studenty a nastavime barvu podle toho, jestli jsou programatori nebo sitari.
 
 const GET_USERS = gql`
-
-query {
-  students(isAdmin : false) {
-    id
-    profileGit
-    proClass
-    idProfile
-    isAdmin
-    user {
+  query {
+    students(isAdmin: false) {
       id
-      email
-      firstName
-      lastName
+      profileGit
+      proClass
+      idProfile
+      isAdmin
+      user {
+        id
+        email
+        firstName
+        lastName
+      }
     }
   }
-}
 `;
 
 const Students = () => {
@@ -57,8 +57,8 @@ const Students = () => {
         {/* HEADER */}
         <Box display="flex" justifyContent="space-between" alignItems="center">
           <Header
-            title="Friends"
-            subtitle="Here you can see your friends... bla bla bla"
+            title="Students"
+            subtitle="Here you can see your Students... bla bla bla"
           />
         </Box>
       </Box>
@@ -82,30 +82,40 @@ const Students = () => {
                   {profile.user.firstName} {profile.user.lastName}
                 </TableCell>
                 <TableCell>{profile.idProfile}</TableCell>
-                <TableCell>{profile.profileGit}</TableCell>
+                <TableCell>
+                  <Link
+                    style={{ color: colors.greenAccent[300] }}
+                    href={profile.profileGit}
+                    target="_blank"
+                  >
+                    {profile.user.firstName}@github
+                  </Link>
+                </TableCell>
                 <TableCell>{profile.user.email}</TableCell>
-                <Box
-                  width="60%"
-                  p="5px"
-                  display="flex"
-                  justifyContent="center"
-                  backgroundColor={
-                    profile.ProClass === "Programmer"
-                      ? colors.greenAccent[800]
-                      : profile.ProClass === "Networker"
-                      ? colors.greenAccent[700]
-                      : colors.greenAccent[700]
-                  }
-                  borderRadius="4px"
-                >
-                  {profile.ProClass === "Programmer" && (
-                    <LaptopChromebookIcon />
-                  )}
-                  {profile.ProClass === "Networker" && <NetworkCheckIcon />}
-                  <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
-                    {profile.ProClass}
-                  </Typography>
-                </Box>
+                <TableCell>
+                  <Box
+                    width="60%"
+                    p="7px"
+                    display="flex"
+                    justifyContent="center"
+                    backgroundColor={
+                      profile.proClass === "PROGRAMMER"
+                        ? colors.greenAccent[800]
+                        : profile.proClass === "NETWORKER"
+                        ? colors.greenAccent[700]
+                        : colors.greenAccent[700]
+                    }
+                    borderRadius="4px"
+                  >
+                    {profile.proClass === "PROGRAMMER" && (
+                      <LaptopChromebookIcon />
+                    )}
+                    {profile.proClass === "NETWORKER" && <NetworkCheckIcon />}
+                    <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
+                      &nbsp;{profile.proClass}
+                    </Typography>
+                  </Box>
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>

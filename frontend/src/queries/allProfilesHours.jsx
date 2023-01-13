@@ -1,7 +1,7 @@
-import React from 'react';
-import { useQuery } from '@apollo/client';
-import gql from 'graphql-tag';
-import { useState, useEffect } from 'react';
+import React from "react";
+import { useQuery } from "@apollo/client";
+import gql from "graphql-tag";
+import { useState, useEffect } from "react";
 
 const GET_PROFILES = gql`
   query {
@@ -30,9 +30,9 @@ function Hours() {
   }, [data]);
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (error) return <p>Error</p>;
 
-  return <div >Total time: {totalTime}</div>;
+  return totalTime;
 }
 
 export default Hours;

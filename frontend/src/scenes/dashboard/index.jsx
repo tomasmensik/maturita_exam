@@ -17,7 +17,7 @@ import DateToday from "../../components/DateToday";
 import DateDeadline from "../../components/DateDeadline";
 import Person2Icon from "@mui/icons-material/Person2";
 import Hours from "../../queries/allProfilesHours";
-
+import AllProfiles from "../../queries/totalProfiles";
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -62,7 +62,7 @@ const Dashboard = () => {
           justifyContent="center"
         >
           <StatBox
-            title={<Hours></Hours>}
+            title={<Hours />}
             subtitle="Hours spent"
             progress="1"
             increase="+14%"
@@ -100,7 +100,7 @@ const Dashboard = () => {
           justifyContent="center"
         >
           <StatBox
-            title="32"
+            title={<AllProfiles />}
             subtitle="Students"
             progress="0.50"
             increase="16/16"

@@ -1,14 +1,49 @@
 import { ResponsivePie } from "@nivo/pie";
 import { tokens } from "../theme";
 import { useTheme } from "@mui/material";
-import { mockPieData as data } from "../data/mockData";
+import gql from "graphql-tag";
+import { useQuery } from "@apollo/client";
+
+const GET_USERS = gql`
+  query {
+    hardwareProjectCount
+    softwareProjectCount
+  }
+`;
+
+const mockPieData = [
+  {
+    id: "Software",
+    label: "Software",
+    value: 8,
+    color: "hsl(104, 70%, 50%)",
+  },
+  {
+    id: "Hardware",
+    label: "Hardware",
+    value: 5,
+    color: "hsl(162, 70%, 50%)",
+  },
+];
+
+function setMockPieData(data) {
+  mockPieData[0].value = data.softwareProjectCount;
+  mockPieData[1].value = data.hardwareProjectCount;
+
+  return mockPieData;
+}
 
 const PieChart = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const { data, loading, error } = useQuery(GET_USERS);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
   return (
     <ResponsivePie
-      data={data}
+      data={setMockPieData(data)}
       theme={{
         axis: {
           domain: {

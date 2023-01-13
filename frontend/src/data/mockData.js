@@ -1,8 +1,5 @@
-//Importovani 'tokens' nam umoznuje pouzivat tokeny na pouzite themes.
-
 import { tokens } from "../theme";
-
-//Toto jsou mock data, ktera pouzivam pro vypsani studentu. Nemam jeste hotovy backend od Honzy, tak tu mam natvrdo data.
+//import { TotalHardware as hardwareCount } from "../queries/totalHardware";
 
 export const mockDataTeam = [
   {
@@ -362,7 +359,7 @@ export const mockPieData = [
   {
     id: "Hardware",
     label: "Hardware",
-    value: 11,
+    value: 5,
     color: "hsl(162, 70%, 50%)",
   },
 ];
