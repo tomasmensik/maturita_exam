@@ -1,0 +1,42 @@
+
+
+Vytvoření uživatele
+
+mutation createUser($input: CreateUserInput!) {
+  createUser(input: $input) {
+    user {
+      id
+      username
+      email
+      firstName
+      lastName
+    }
+    errors
+  }
+}
+
+QUERY VARIABLES
+{
+  "input": {
+    "firstName": "Jan",
+    "lastName":  "Slivka",
+    "username": "Hans",
+    "email": "slivka@email",
+    "password": "password"
+  }
+}
+
+{
+  "data": {
+    "createUser": {
+      "user": {
+        "id": "9",
+        "username": "Hans",
+        "email": "slivka@email",
+        "firstName": "Jan",
+        "lastName": "Slivka"
+      },
+      "errors": null
+    }
+  }
+}

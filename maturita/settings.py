@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'corsheaders',
     'graphene_django',
     'graphql_jwt.refresh_token.apps.RefreshTokenConfig',
 
@@ -44,11 +45,13 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+  
 
 ]
 
@@ -155,3 +158,11 @@ GRAPHQL_JWT = {
     "JWT_LONG_RUNNING_REFRESH_TOKEN": True,
 }
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8000",
+ 
+]
+
+CORS_EXPOSE_HEADERS = ["Content-Type","X-CSRFToken","Authorization"]
+
+CORS_ALLOW_CREDENTIALS = True # Allow all origins

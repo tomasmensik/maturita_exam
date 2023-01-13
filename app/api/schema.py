@@ -66,6 +66,49 @@ class Comment(DjangoObjectType):
         fields = ["id","profile_comment","time_comment","content"]
 
 
+class CreateUserPayload(graphene.ObjectType):
+    user = graphene.Field(lambda: User)
+    errors = graphene.List(graphene.String)
+
+class CreateUserInput(graphene.InputObjectType):
+    first_name = graphene.String(required=True)
+    last_name = graphene.String(required=True)
+    username = graphene.String(required=True)
+    email = graphene.String(required=True)
+    password = graphene.String(required=True)
+
+class CreateUserMutation(graphene.Mutation):
+    class Arguments:
+        input = CreateUserInput(required=True)
+
+    Output = CreateUserPayload
+
+    def mutate(self, info, input):
+        User = USERMODEL
+        try:
+            user = User.objects.create_user(**input)
+            user.first_name = input.get('first_name')
+            user.last_name = input.get('last_name')
+            user.save()
+            return CreateUserPayload(user=user, errors=None)
+        except Exception as e:
+            return CreateUserPayload(user=None, errors=[str(e)])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Mutation(graphene.ObjectType):
     token_auth = graphql_jwt.ObtainJSONWebToken.Field()
     verify_token = graphql_jwt.Verify.Field()
@@ -73,7 +116,7 @@ class Mutation(graphene.ObjectType):
     delete_token_cookie = graphql_jwt.DeleteJSONWebTokenCookie.Field()
     # Long running refresh tokens
     delete_refresh_token_cookie = graphql_jwt.DeleteRefreshTokenCookie.Field()
-
+    create_user = CreateUserMutation.Field()
 
 class Query(graphene.ObjectType):
     projects = graphene.List(Project)
@@ -132,8 +175,6 @@ class Query(graphene.ObjectType):
 
     def resolve_total_profiles(self, info):
         return PROFILEMODEL.objects.count()
-
-
 
     def resolve_projects(self, info):
         return PROJECTMODEL.objects.all()
