@@ -116,6 +116,7 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 | Youtube - React Tutorial                                     | [Click here](https://www.youtube.com/watch?v=bMknfKXIFA8)                                             |
 | Tailwindcss - Gradient barev z jedné barvy (ctrl k + ctrl g) | [Click here](https://tailwindcss.com/docs/customizing-colors)                                         |
 | Bobbyhadz - Fix na error duplicitních knihoven v Reactu      | [Click here](https://bobbyhadz.com/blog/react-invalid-hook-call-hooks-can-only-be-called-inside-body) |
+| ... více zdrojů v dokumentaci                                | [Click here](https://files.fm/u/k2398r495)
 
 #### Časový harmonogram:
 
@@ -131,19 +132,19 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 
 - Listopad
 
-> ...
+> Naprogramovat potřebné komponenty
 >
-> ...
+> Poskládání scén
 >
-> ...
+> Routování
 
 - Prosinec
 
-> ...
+> Načtení dat do grafů
 >
-> ...
+> Vypsání dat do scén
 >
-> ...
+> Poslední úpravy
 
 #### Celkově strávený čas na projektu: Tomáš Menšík
 
@@ -173,6 +174,12 @@ Naprogramovat funkční webovou aplikací, která je schopna být publikovaná n
 | 29.12.2022 | 5 hodina | Fix - pomáhaní s API vypisováním z databáze                        |
 | 30.12.2022 | 2 hodiny | Sidebar - přepnutí mezi Admin/Student + Login button přesunut      |
 | 30.12.2022 | 2 hodiny | Fix - API request z databáze do Students a tvorba frontendu k tomu |
+| 3.1.2023   | 6 hodin  | Fix - Login a register                                             |
+| 3.1.2023   | 2 hodiny | Sledování Youtube tutoriálu na JWT authentication                  |
+| 3.1.2023   | 4 hodiny | Scenes - snažení se o JWT authentication                           |
+| 8.1.2023   | 4 hodin  | Vypisování dat z databáze do grafů                                 |
+| 8.1.2023   | 2 hodiny | Fixování databáze u mě na locálu                                   |
+| 13.1.2023  | 9 hodin  | Finishování projektu, student, login/register a grafy              |
 
 #### Instalace a spuštění
 
