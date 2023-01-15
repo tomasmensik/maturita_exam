@@ -22,7 +22,7 @@ import AllProfiles from "../../queries/totalProfiles";
 const Dashboard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  let numberOfDaysLeft = 13;
+  let numberOfDaysLeft = 0;
 
   return (
     <Box m="20px">
